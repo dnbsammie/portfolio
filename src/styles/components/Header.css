@@ -1,0 +1,86 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--pad-1);
+    z-index: 1000;
+    will-change: transform;
+
+}
+
+nav {
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* === Audio === */
+.audio-toggle {
+    display: flex;
+    gap: 2px;
+    cursor: pointer;
+    padding: 3px;
+    align-items: flex-end;
+    height: 20px;
+}
+
+.audio-toggle:hover .bar {
+    background-color: var(--secondary);
+}
+
+.bar {
+    width: 3px;
+    height: 6px;
+    background-color: var(--text);
+    border-radius: 2px;
+    transition: height 0.3s ease;
+}
+
+.bar.animate {
+    animation: equalizer 1s infinite ease-in-out;
+}
+
+.bar:nth-child(1).animate {
+    animation-delay: 0s;
+}
+
+.bar:nth-child(2).animate {
+    animation-delay: 0.1s;
+}
+
+.bar:nth-child(3).animate {
+    animation-delay: 0.2s;
+}
+
+.bar:nth-child(4).animate {
+    animation-delay: 0.3s;
+}
+
+.bar:nth-child(5).animate {
+    animation-delay: 0.4s;
+}
+
+@keyframes equalizer {
+    0% {
+        height: 6px;
+    }
+
+    25% {
+        height: 12px;
+    }
+
+    50% {
+        height: 9px;
+    }
+
+    75% {
+        height: 15px;
+    }
+
+    100% {
+        height: 3px;
+    }
+}

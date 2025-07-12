@@ -1,0 +1,36 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hero_title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero_title h1 {
+    text-align: center;
+    font-size: clamp(7rem, 12vw, 9rem);
+}
+
+.hero_title h5 {
+    letter-spacing: 0.9vw;
+}
+
+.sub_title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub_title p {
+    max-width: 200px;
+}
