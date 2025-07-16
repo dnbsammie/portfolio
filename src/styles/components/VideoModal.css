@@ -14,14 +14,14 @@
     z-index: 1000;
     opacity: 0;
     transform: scale(0.95);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
 }
 
 .video-modal.show {
-    visibility: visible;
     opacity: 1;
     transform: scale(1);
+    visibility: visible;
 }
 
 .video-modal.closing {
@@ -29,6 +29,7 @@
     transform: scale(0.9);
     visibility: hidden;
 }
+
 
 .video-container {
     width: 100%;
@@ -47,12 +48,12 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    gap: var(--gap-2);
+    gap: var(--gap-1);
     aspect-ratio: 16/9;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     width: 90%;
-    max-width: 2048px;
+    max-width: 1366px;
     max-height: 90%;
 }
 

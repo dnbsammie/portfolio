@@ -44,7 +44,6 @@ export function useBackgroundCanvas() {
         update(canvas: HTMLCanvasElement, mouse?: Vector2D | null) {
             const { x, y } = this.coordinates;
 
-            // Volver al punto original
             const dx = this.origin.x - x;
             const dy = this.origin.y - y;
             this.velocity.x += dx * 0.01;
@@ -64,14 +63,12 @@ export function useBackgroundCanvas() {
                 this.color = "#dcdcdc";
             }
 
-            // Fricción
             this.velocity.x *= 0.9;
             this.velocity.y *= 0.9;
 
             this.coordinates.x += this.velocity.x;
             this.coordinates.y += this.velocity.y;
 
-            // Evita que se salga del canvas
             if (this.coordinates.x <= 0 || this.coordinates.x >= canvas.width)
                 this.velocity.x *= -1;
             if (this.coordinates.y <= 0 || this.coordinates.y >= canvas.height)
@@ -84,7 +81,6 @@ export function useBackgroundCanvas() {
             ctx.arc(this.coordinates.x, this.coordinates.y, this.radius, 0, Math.PI * 2);
             ctx.fill();
 
-            // Línea al mouse
             if (mouse) {
                 const dist = Math.hypot(mouse.x - this.coordinates.x, mouse.y - this.coordinates.y);
                 if (dist < 100) {

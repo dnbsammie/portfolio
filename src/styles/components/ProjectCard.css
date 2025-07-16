@@ -1,0 +1,76 @@
+.project {
+    position: relative;
+    min-width: 640px;
+    max-width: 1280px;
+    min-height: 360px;
+    max-height: 720px;
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 5px solid var(--text);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    background: var(--text);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    background-color: var(--primary);
+    border: 5px solid var(--primary);
+}
+
+.project-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) contrast(0.9) saturate(0.5);
+    border-radius: 5px;
+    transition: filter 0.3s ease-in-out;
+}
+
+.project:hover .project-video {
+    filter: brightness(1) contrast(1.05) saturate(1.1);
+}
+
+.project:hover .project-overlay h5,
+.project:hover .project-overlay p {
+    color: var(--primary);
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.project-overlay h5 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--background-alt);
+}
+
+.project-overlay p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: var(--background-alt);
+    align-self: flex-end;
+}
+
+@media (min-width: 768px) {
+    .project {
+        width: 40vw;
+    }
+}

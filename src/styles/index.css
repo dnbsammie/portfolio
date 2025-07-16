@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=MuseoModerno:700|JetBrains%20Mono:400');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Special+Gothic+Expanded+One&display=swap');
 
 :root {
-  --text: hsl(0, 0%, 95%);
-  --text-alt: hsl(0, 0%, 85%);
-  --background: hsl(0, 0%, 5%);
-  --background-alt: hsl(0, 0%, 15%);
-  --primary: hsl(23, 100%, 65%);
-  --secondary: hsl(11, 100%, 62%);
-  --accent: hsl(0, 100%, 59%);
+  --text: hsl(0, 0%, 6%);
+  --text-alt: hsl(0, 0%, 10%);
+  --background: hsl(0, 0%, 90%);
+  --background-alt: hsl(0, 0%, 94%);
+  --primary: hsl(2, 53%, 38%);
+  --secondary: hsl(4, 60%, 52%);
+  --accent: hsl(4, 100%, 65%);
   --linearPrimarySecondary: linear-gradient(90deg, var(--primary), var(--secondary));
   --linearPrimaryAccent: linear-gradient(90deg, var(--primary), var(--accent));
   --linearSecondaryAccent: linear-gradient(90deg, var(--secondary), var(--accent));
@@ -15,6 +15,7 @@
   --radialPrimaryAccent: radial-gradient(var(--primary), var(--accent));
   --radialSecondaryAccent: radial-gradient(var(--secondary), var(--accent));
   --pad-1: min(5%, 30px);
+  --pad-2: min(5%, 30px) 0;
   --gap-1: clamp(0.5rem, 1vw, 2.5rem);
 }
 
@@ -33,7 +34,7 @@ body {
   font-family: 'JetBrains Mono';
   font-weight: 400;
   background: var(--background);
-  color: var(--text);
+  color: var(--text-alt);
   overflow-x: hidden;
 }
 
@@ -53,9 +54,11 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'MuseoModerno';
+  font-family: "Special Gothic Expanded One", sans-serif;
   font-weight: 700;
-  line-height: 0.9;
+  font-style: normal;
+  line-height: 0.8;
+  color: var(--text);
 }
 
 h1 {
@@ -97,11 +100,11 @@ small {
 a {
   color: inherit;
   user-select: none;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 a:hover {
-  color: var(--accent);
+  color: var(--secondary);
   outline: none;
   box-shadow: none;
   cursor: pointer;
@@ -116,8 +119,8 @@ a.button {
   width: min(150px, 48%);
   height: fit-content;
   border: 5px solid var(--secondary);
-  color: var(--secondary);
-  transition: all 0.3s ease-in-out;
+  color: var(--text);
+  transition: all 0.2s ease-in-out;
 }
 
 a.line-button {
@@ -126,13 +129,13 @@ a.line-button {
 
 a.fill-button {
   background-color: var(--secondary);
-  color: var(--primary);
+  color: var(--background);
 }
 
 a.button:hover {
-  border: 5px solid var(--text);
-  background-color: var(--text);
-  color: var(--primary);
+  border: 5px solid var(--accent);
+  background-color: var(--accent);
+  color: var(--background);
 }
 
 /* == Font Awesome == */
@@ -183,6 +186,20 @@ section {
   height: 100svh;
   width: 100%;
   padding: var(--pad-1);
+}
+
+.hero,
+.about,
+.expertise,
+.blog,
+footer {
+  display: flex;
+}
+
+.about,
+.expertise {
+  background: var(--text);
+  color: var(--background);
 }
 
 /* === Elements === */

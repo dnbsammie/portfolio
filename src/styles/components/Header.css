@@ -17,6 +17,97 @@ nav {
     align-items: center;
 }
 
+/* Navbar.css */
+/* .navbar {
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    padding: var(--pad-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text);
+    z-index: 1000;
+} */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    pointer-events: auto;
+}
+
+
+.overlay-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.menu-item a {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    text-align: center;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    color: var(--text);
+}
+
+.toggle-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px var(--pad-1);
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 28px;
+    height: 28px;
+    transition: all 250ms ease-out;
+    cursor: pointer;
+}
+
+.burger:before,
+.burger:after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background: var(--text);
+    position: absolute;
+    transition: all 250ms ease-out;
+    will-change: transform;
+}
+
+.burger:before {
+    transform: translateY(-3px);
+}
+
+.burger:after {
+    transform: translateY(3px);
+}
+
+.active.burger::after {
+    transform: translateY(0) rotate(-45deg);
+}
+
 /* === Audio === */
 .audio-toggle {
     display: flex;
@@ -24,7 +115,7 @@ nav {
     cursor: pointer;
     padding: 3px;
     align-items: flex-end;
-    height: 20px;
+    height: 28px;
 }
 
 .audio-toggle:hover .bar {

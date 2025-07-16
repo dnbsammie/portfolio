@@ -1,17 +1,11 @@
 footer {
     position: relative;
-    display: flex;
     flex-direction: column;
     width: 100%;
     height: 100vh;
     padding: var(--pad-1);
-    background: var(--primary);
-    color: var(--background-alt);
     border-bottom: none;
-}
-
-footer a:hover {
-    color: var(--text-alt);
+    background: var(--background-alt);
 }
 
 .footer_top {
@@ -37,11 +31,11 @@ footer a:hover {
 }
 
 .letter {
-    font-size: clamp(7rem, 12vw, 9rem);
+    font-size: clamp(5rem, 12vw, 9rem);
     font-weight: bold;
     flex: 1;
     text-align: center;
-    color: var(--background);
+    color: var(--text);
 }
 
 .wide {
@@ -78,7 +72,7 @@ footer a:hover {
 .email-container {
     display: flex;
     align-items: center;
-    border: 1px solid var(--background);
+    border: 1px solid var(--text);
     border-radius: 8px;
     overflow: hidden;
     max-width: 300px;
@@ -90,23 +84,31 @@ footer a:hover {
     flex: 1;
     font-size: 0.9rem;
     font-family: inherit;
-    background-color: var(--text-alt);
+    background-color: var(--background);
     cursor: pointer;
-    color: var(--background);
+    color: var(--text);
 }
 
 .email-container input:focus {
     outline: none;
 }
 
+
 .email-container button {
-    background-color: var(--background);
-    color: var(--text);
+    background-color: var(--text);
+    color: var(--background);
     border: none;
     padding: 0 10px;
     height: 100%;
     cursor: pointer;
     font-size: 1.2rem;
+}
+
+
+.email-container input:hover,
+.email-container button:hover {
+    color: var(--accent);
+    transition: color 0.1s ease-in-out;
 }
 
 #copyMsg {
