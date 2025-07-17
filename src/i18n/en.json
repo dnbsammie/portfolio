@@ -1,0 +1,21 @@
+{
+    "hero": {
+        "subtitle": "SOFTWARE DEVELOPER"
+    },
+    "about": {
+        "title": "ABOUT ME",
+        "bio": "BIO",
+        "aproach": "MY APROACH"
+    },
+    "projects": {
+        "title": "PROJECTS",
+        "pt1": "PROJECT 01",
+        "pt2": "PROJECT 02",
+        "pt3": "PROJECT 03",
+        "pt4": "PROJECT 04",
+        "dt1": "Description 01",
+        "dt2": "Description 02",
+        "dt3": "Description 03",
+        "dt4": "Description 04"
+    }
+}

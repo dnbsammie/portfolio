@@ -1,12 +1,14 @@
+import { useLanguage } from "../i18n/LanguageContext";
 import "../styles/sections/Hero.css";
 
 const Hero = () => {
+    const { t } = useLanguage();
     return (
         <section className="hero" id="hero" aria-labelledby="hero-section">
             <div className="hero_title">
                 <small>more than code</small>
                 <h1>SAMUEL RIVERA</h1>
-                <h6>SOFTWARE DEVELOPER</h6>
+                <h6>{t("hero.subtitle")}</h6>
             </div>
             <div className="sub_title">
                 <p className="advice">Avaliable for freelance work!</p>

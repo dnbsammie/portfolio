@@ -14,8 +14,10 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "gsap": "^3.13.0",
+    "i18next": "^25.3.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-i18next": "^15.6.0",
     "react-router-dom": "^7.6.3",
     "react-scroll": "^1.9.3"
   },

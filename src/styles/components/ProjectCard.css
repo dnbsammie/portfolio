@@ -38,7 +38,7 @@
 
 .project:hover .project-overlay h5,
 .project:hover .project-overlay p {
-    color: var(--primary);
+    color: var(--accent);
     transition: transform 0.3s ease-in-out;
 }
 

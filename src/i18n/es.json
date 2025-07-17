@@ -1,0 +1,21 @@
+{
+    "hero": {
+        "subtitle": "DESARROLLADOR DE SOFTWARE"
+    },
+    "about": {
+        "title": "SOBRE MI",
+        "bio": "BIO",
+        "aproach": "ENFOQUE"
+    },
+    "projects": {
+        "title": "PROYECTOS",
+        "pt1": "PROYECTO 01",
+        "pt2": "PROYECTO 02",
+        "pt3": "PROYECTO 03",
+        "pt4": "PROYECTO 04",
+        "dt1": "Descripción 01",
+        "dt2": "Descripción 02",
+        "dt3": "Descripción 03",
+        "dt4": "Descripción 04"
+    }
+}

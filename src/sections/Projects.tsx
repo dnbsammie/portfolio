@@ -3,6 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 import "../styles/sections/Projects.css";
 
 const Projects = () => {
+
     useEffect(() => {
         const handleScroll = () => {
             document.querySelectorAll<HTMLElement>(".sticky").forEach(section => {

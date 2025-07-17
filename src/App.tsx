@@ -1,3 +1,4 @@
+import { LanguageProvider } from "./i18n/LanguageContext";
 import Background from "./components/Background";
 import Navbar from "./components/Navbar"
 import Hero from "./sections/Hero"
@@ -9,15 +10,17 @@ function App() {
 
   return (
     <>
-      <Background />
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Expertise />
-      </main>
-      <Footer />
+      <LanguageProvider>
+        <Background />
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Projects />
+          <Expertise />
+        </main>
+        <Footer />
+      </LanguageProvider>
     </>
   )
 }
