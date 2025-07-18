@@ -1,5 +1,5 @@
 .projects {
-    height: 400vh;
+    height: 300vh;
     padding: 0;
     background-color: transparent;
 }
@@ -16,7 +16,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 400vw;
+    width: 300vw;
     display: flex;
     justify-content: space-around;
     align-items: center;

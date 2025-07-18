@@ -18,9 +18,6 @@ const About = () => {
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui soluta voluptatum repellat dolor numquam magnam doloremque error aperiam delectus quos nemo neque similique nesciunt laudantium, ad atque corporis. Eveniet, fugit?</p>
                 </div>
             </div>
-            <div className="about-right">
-
-            </div>
         </section>
     )
 }
