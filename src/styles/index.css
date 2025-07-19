@@ -98,6 +98,7 @@ small {
 
 /* === CTA ===*/
 a {
+  text-decoration: none;
   color: inherit;
   user-select: none;
   transition: color 0.2s ease-in-out;
