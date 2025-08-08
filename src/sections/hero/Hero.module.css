@@ -1,0 +1,54 @@
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: transparent;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    transition: opacity 0.6s ease, pointer-events 0.6s ease;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hero_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-1);
+    height: 100%;
+    width: fit-content;
+}
+
+.hero_title h2 {
+    max-width: 20ch;
+}
+
+.hero_title h5 {
+    color: var(--gray-200);
+}
+
+.hero_sides {
+    position: relative;
+    height: 100%;
+    width: var(--pad-2);
+    gap: var(--gap-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+}
+
+.vertical_link {
+    color: var(--gray-200);
+    writing-mode: vertical-lr;
+    white-space: nowrap;
+    max-height: 100%;
+    max-width: 100%;
+    text-align: left;
+}

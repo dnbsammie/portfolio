@@ -1,0 +1,157 @@
+.nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--pad-1);
+    color: var(--gray-200);
+    mix-blend-mode: difference;
+    z-index: 2000;
+}
+
+/* === Nav Elements === */
+.nav > div {
+    flex: 1;
+}
+
+.logo {
+    text-align: center;
+    text-transform: lowercase;
+    font-family: "Questrial", sans-serif;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.logo a:hover {
+    color: var(--gray-100);
+}
+
+.toggle-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.burger {
+    position: relative;
+    width: 28px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--gray-200);
+    transition: all 0.3s ease;
+}
+
+.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* === Menu Overlay === */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--gray-200);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    pointer-events: auto;
+}
+
+.overlay-menu {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.menu-item {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.menu-item p {
+    position: relative;
+    text-align: center;
+    font-family: "Questrial", sans-serif;
+    text-transform: lowercase;
+    font-size: clamp(6.075rem, 10vw, 11.090rem);
+    line-height: 0.8;
+    color: var(--gray-400);
+    transition: letter-spacing 0.3s;
+    will-change: transform;
+}
+
+.menu-item p:hover {
+    letter-spacing: 0.075em;
+}
+
+.menu-item p::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+    background: var(--gray-300);
+    height: 6px;
+    width: 0%;
+    pointer-events: none;
+}
+
+.menu-item a {
+    font-size: clamp(6.075rem, 10vw, 11.090rem);
+    text-decoration: none;
+    color: var(--gray-400);
+}
+
+.menu-item p.active::after {
+    width: 100%;
+}
+
+.sub-nav {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--gap-3);
+    opacity: 0;
+}
+
+.sub-nav a {
+    text-decoration: none;
+    font-size: clamp(1rem, 2.25vw, 1rem);
+    color: var(--gray-300);
+    transition: color .4s ease;
+}
