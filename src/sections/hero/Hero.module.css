@@ -9,11 +9,6 @@
     transition: opacity 0.6s ease, pointer-events 0.6s ease;
 }
 
-.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
 .hero_title {
     display: flex;
     flex-direction: column;

@@ -12,7 +12,7 @@ const Projects = () => {
 
             const offsetTop = sectionRef.current.offsetTop;
             const scrollY = window.scrollY;
-            const percentage = Math.min(Math.max(((scrollY - offsetTop) / window.innerHeight) * 100, 0), 600);
+            const percentage = Math.min(Math.max(((scrollY - offsetTop) / window.innerHeight) * 100, 0), 500);
             scrollRef.current.style.transform = `translate3d(${-percentage}vw, 0, 0)`;
         };
 
@@ -29,7 +29,7 @@ const Projects = () => {
             <div className={styles.sticky}>
                 {/* <canvas className={styles.outline_layer}></canvas> */}
                 <div className={styles.title}>
-                    <h2>projects</h2>
+                    <h1>projects</h1>
                 </div>
                 <div className={styles.scroll_section} ref={scrollRef}>
                     {projectsData.map((project, index) => (
@@ -37,7 +37,7 @@ const Projects = () => {
                             key={index}
                             className={`${styles.project} ${styles[project.orientation]}`}
                         >
-                            <img src={project.img} alt={project.title} />
+                            <img src={project.img} alt={project.title} loading="lazy" />
                             <div className={styles.projectTitle}>{project.title}</div>
                             <div className={styles.links}>
                                 {project.links.map((link, idx) => (

@@ -18,74 +18,29 @@ export const Navbar = () => {
     useGSAP(() => {
         gsap.set(menuItemsRef.current, { y: 1000 });
         gsap.set(subNavRef.current, { opacity: 0, bottom: "5%" });
-
         const tl = gsap.timeline({ paused: true });
-
-        tl.to(overlayRef.current, {
-            duration: 1.5,
-            clipPath: "polygon(0% 0%,100% 0%, 100% 100%,0% 100%)",
-            ease: "power4.inOut",
-        });
-
-        tl.to(
-            menuItemsRef.current,
-            {
-                duration: 1,
-                y: 0,
-                stagger: 0.2,
-                ease: "power4.inOut",
-            },
-            "-=1"
-        );
-
-        tl.to(
-            subNavRef.current,
-            {
-                bottom: "10%",
-                opacity: 1,
-                duration: 0.5,
-                delay: 0.5
-            },
-            "<"
-        );
+        tl.to(overlayRef.current, { duration: 1.5, clipPath: "polygon(0% 0%,100% 0%, 100% 100%,0% 100%)", ease: "power4.inOut", });
+        tl.to(menuItemsRef.current, { duration: 1, y: 0, stagger: 0.2, ease: "power4.inOut", }, "-=1");
+        tl.to(subNavRef.current, { bottom: "10%", opacity: 1, duration: 0.5, delay: 0.5 }, "<");
 
         timelineRef.current = tl;
     }, []);
 
     const toggleMenu = () => {
         if (!timelineRef.current) return;
-
-        if (isOpen) {
-            timelineRef.current.reverse();
-        } else {
-            timelineRef.current.play();
-        }
-
+        if (isOpen) { timelineRef.current.reverse(); } else { timelineRef.current.play(); }
         setIsOpen(!isOpen);
     };
 
     const handleNavClick = (section: string) => {
         if (!timelineRef.current) return;
-
         setActiveItem(section);
-
         const rule = CSSRulePlugin.getRule(`.${styles["menu-item"]} p.${styles.active}::after`);
-        if (rule) {
-            gsap.fromTo(rule, { width: "0%" }, {
-                width: "100%",
-                duration: 1,
-                ease: "power2.out"
-            });
-        }
+        if (rule) { gsap.fromTo(rule, { width: "0%" }, { width: "100%", duration: 1, ease: "power2.out" }); }
 
         timelineRef.current.reverse().eventCallback("onReverseComplete", () => {
             setActiveItem(null);
-            if (subNavRef.current) {
-                gsap.set(subNavRef.current, {
-                    opacity: 0,
-                    bottom: "5%",
-                });
-            }
+            if (subNavRef.current) { gsap.set(subNavRef.current, { opacity: 0, bottom: "5%", }); }
         });
         setIsOpen(false);
     };
@@ -94,70 +49,26 @@ export const Navbar = () => {
         <>
             <nav className={styles.nav} role="navigation" aria-label="main-nav">
                 <div></div>
-                <div className={styles.logo}>
-                    <a href="./">s. rivera</a>
-                </div>
+                <div className={styles.logo}><a href="./">s. rivera</a></div>
                 <div className={styles["toggle-btn"]}>
-                    <button
-                        className={`${styles.burger} ${isOpen ? styles.active : ""}`}
-                        onClick={toggleMenu}
-                        ref={burgerRef}
-                        aria-label="Toggle menu"
-                    >
-                        <span />
-                        <span />
-                        <span />
-                    </button>
+                    <button className={`${styles.burger} ${isOpen ? styles.active : ""}`} onClick={toggleMenu} ref={burgerRef} aria-label="Toggle menu"><span /> <span /><span /></button>
                 </div>
             </nav>
-
             <div ref={overlayRef} className={styles.overlay}>
                 <menu className={styles["overlay-menu"]}>
-                    <div
-                        className={styles["menu-item"]}
-                        ref={(el) => {
-                            if (el) menuItemsRef.current[0] = el;
-                        }}
-                    >
+                    <div className={styles["menu-item"]} ref={(el) => { if (el) menuItemsRef.current[0] = el; }}>
                         <p className={activeItem === "hero" ? styles.active : ""}>
-                            <Link
-                                to="hero"
-                                spy={true}
-                                smooth={true}
-                                duration={500}
-                                onClick={() => handleNavClick("hero")}
-                            >
-                                home
-                            </Link>
+                            <Link to="hero" spy={true} smooth={true} duration={500} onClick={() => handleNavClick("hero")}>home</Link>
                         </p>
                     </div>
-                    <div
-                        className={styles["menu-item"]}
-                        ref={(el) => {
-                            if (el) menuItemsRef.current[1] = el;
-                        }}
-                    >
+                    <div className={styles["menu-item"]} ref={(el) => { if (el) menuItemsRef.current[1] = el; }}>
                         <p className={activeItem === "projects" ? styles.active : ""}>
-                            <Link
-                                to="projects"
-                                spy={true}
-                                smooth={true}
-                                duration={500}
-                                onClick={() => handleNavClick("projects")}
-                            >
-                                work
-                            </Link>
+                            <Link to="projects" spy={true} smooth={true} duration={500} onClick={() => handleNavClick("projects")}>work</Link>
                         </p>
                     </div>
-                    <div className={styles["menu-item"]}
-                        ref={(el) => {
-                            if (el) menuItemsRef.current[2] = el;
-                        }}>
+                    <div className={styles["menu-item"]} ref={(el) => { if (el) menuItemsRef.current[2] = el; }}>
                         <p className={activeItem === "footer" ? styles.active : ""}>
-                            <Link to="footer" spy={true} smooth={true}
-                                duration={500} onClick={() => handleNavClick("footer")}>
-                                contact
-                            </Link>
+                            <Link to="footer" spy={true} smooth={true} duration={500} onClick={() => handleNavClick("footer")}>contact</Link>
                         </p>
                     </div>
                 </menu>
@@ -168,8 +79,6 @@ export const Navbar = () => {
                     <a href="https://github.com/dnbsammie" className="fa-brands fa-github" target="_blank" aria-label="github"></a>
                     <a href="https://codepen.io/dnbsammie" className="fa-brands fa-codepen" target="_blank" aria-label="codepen"></a>
                     <a href="https://www.youtube.com/@dnbsammie" className="fa-brands fa-youtube" target="_blank" aria-label="youtube"></a>
-                    {/* <a href="#" className="fa-brands fa-spotify" target="_blank" aria-label="spotify"></a>
-                        <a href="#" className="fa-brands fa-soundcloud" target="_blank" aria-label="soundcloud"></a> */}
                 </div>
             </div>
         </>

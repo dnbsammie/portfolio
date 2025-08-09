@@ -75,7 +75,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: var(--gray-200);
+    background: var(--gray-100);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     display: flex;
     flex-direction: column;
@@ -106,7 +106,7 @@
     text-align: center;
     font-family: "Questrial", sans-serif;
     text-transform: lowercase;
-    font-size: clamp(6.075rem, 10vw, 11.090rem);
+    font-size: clamp(5rem, 9vw, 7.5rem);
     line-height: 0.8;
     color: var(--gray-400);
     transition: letter-spacing 0.3s;
@@ -130,7 +130,7 @@
 }
 
 .menu-item a {
-    font-size: clamp(6.075rem, 10vw, 11.090rem);
+    font-size: clamp(5rem, 9vw, 7.5rem);
     text-decoration: none;
     color: var(--gray-400);
 }
@@ -145,13 +145,22 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    flex-direction: row;
+    height: fit-content;
+    line-height: 0.5;
+    width: fit-content;
     gap: var(--gap-3);
+    color: var(--gray-300);
     opacity: 0;
 }
 
 .sub-nav a {
     text-decoration: none;
-    font-size: clamp(1rem, 2.25vw, 1rem);
-    color: var(--gray-300);
     transition: color .4s ease;
+}
+
+.sub-nav a:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    filter: brightness(0.8);
 }

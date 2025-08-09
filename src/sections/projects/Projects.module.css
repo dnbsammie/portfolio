@@ -1,5 +1,5 @@
 .projects {
-    height: 600vh;
+    height: 500vh;
     padding: 0;
     background-color: transparent;
 }
@@ -18,7 +18,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: calc(100vw*6);
+    width: calc(100vw*5);
     display: flex;
     justify-content: space-around;
     align-items: center;

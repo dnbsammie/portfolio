@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Questrial&family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&family=Questrial&display=swap');
 
 :root {
   --gray-100: hsl(0, 0%, 94%);
@@ -57,37 +57,41 @@ h5 {
 }
 
 h1 {
-  font-size: clamp(6.075rem, 10vw, 11.090rem);
+  font-size: clamp(4rem, 9vw, 8rem);
 }
 
 h2 {
-  font-size: clamp(4.050rem, 7vw, 6.854rem);
+  font-size: clamp(3rem, 7vw, 6rem);
 }
 
 h3 {
-  font-size: clamp(2.700rem, 5vw, 4.236rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
 h4 {
-  font-size: clamp(1.800rem, 3.5vw, 2.618rem);
+  font-size: clamp(1.75rem, 3.5vw, 3rem);
 }
 
 h5 {
-  font-size: clamp(1.200rem, 2.5vw, 1.618rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+h5 {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
 }
 
 p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
 
 small {
-  font-size: clamp(0.533rem, 1vw, 0.618rem);
+  font-size: clamp(0.5rem, 0.5vw, 0.618rem);
 }
 
 ul,
 ol {
   list-style-type: none;
-  gap: var(--gap-1);
+  gap: var(--gap-2);
   margin: 0;
   padding: 0;
 }
@@ -100,7 +104,7 @@ li {
 
 /* === CTA ===*/
 a {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   text-decoration: none;
   color: inherit;
   user-select: none;
@@ -108,6 +112,7 @@ a {
 }
 
 a:hover {
+  filter: brightness(1.5);
   outline: none;
   box-shadow: none;
   cursor: pointer;
@@ -158,32 +163,6 @@ hr {
   color: var(--gray-200);
   mix-blend-mode: difference;
   font-family: 'JetBrains Mono';
-}
-
-/* == Font Awesome == */
-.socials {
-  display: flex;
-  height: fit-content;
-  line-height: 0.5;
-  width: fit-content;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(0.75rem, 3vw, 1rem);
-}
-
-.socials a,
-.socials a {
-  text-decoration: none;
-  font-size: clamp(16px, 2.25vw, 1.05rem);
-  color: inherit;
-  transition: color .4s ease;
-}
-
-.socials a:hover,
-.socials a:hover {
-  text-decoration: none;
-  transform: scale(1.1);
 }
 
 .backgroundCanvas {

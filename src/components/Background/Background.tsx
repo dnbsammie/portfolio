@@ -5,43 +5,58 @@ import fluidShader from "./shaders/fluid.glsl?raw";
 import displayShader from "./shaders/display.glsl?raw";
 import config from "./config";
 
+const fpsTarget = 30;
+const maxPixelRatio = 1.5;
+const lowResScale = 0.75;
+const useHalfFloat = true;
+const resizeDebounce = 150;
+const adaptiveFallback = true;
+
+const sharedGeometry = new THREE.PlaneGeometry(2, 2);
+
 export default function Background() {
     const canvasRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         let animationFrameId: number;
+        let resizeTimeout: NodeJS.Timeout;
         let isTabActive = true;
+        let isInViewport = true;
+        let lastTime = 0;
+        let frameCount = 0;
+        let pixelRatio = Math.min(window.devicePixelRatio, maxPixelRatio);
+        let mounted = true;
 
         const width = window.innerWidth;
         const height = window.innerHeight;
-
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+
         renderer.setSize(width, height);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1));
+        renderer.setPixelRatio(pixelRatio);
 
         const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
-
         const targetOptions = {
             minFilter: THREE.LinearFilter,
             magFilter: THREE.LinearFilter,
             format: THREE.RGBAFormat,
-            type: THREE.FloatType,
+            type: useHalfFloat ? THREE.HalfFloatType : THREE.FloatType,
             stencilBuffer: false,
             depthBuffer: false,
         };
-        const fluidTarget1 = new THREE.WebGLRenderTarget(width, height, targetOptions);
+
+        const lowW = Math.floor(width * lowResScale);
+        const lowH = Math.floor(height * lowResScale);
+        const fluidTarget1 = new THREE.WebGLRenderTarget(lowW, lowH, targetOptions);
         const fluidTarget2 = fluidTarget1.clone();
         let currentTarget = fluidTarget1;
         let previousTarget = fluidTarget2;
-
-        let frameCount = 0;
 
         const fluidMaterial = new THREE.ShaderMaterial({
             vertexShader,
             fragmentShader: fluidShader,
             uniforms: {
                 iTime: { value: 0 },
-                iResolution: { value: new THREE.Vector2(width, height) },
+                iResolution: { value: new THREE.Vector2(lowW, lowH) },
                 iFrame: { value: 0 },
                 iPreviousFrame: { value: previousTarget.texture },
                 uFluidDecay: { value: config.fluidDecay },
@@ -66,42 +81,50 @@ export default function Background() {
             },
         });
 
-        const geometry = new THREE.PlaneGeometry(2, 2);
-        const fluidMesh = new THREE.Mesh(geometry, fluidMaterial);
-        const displayMesh = new THREE.Mesh(geometry, displayMaterial);
-
+        const fluidMesh = new THREE.Mesh(sharedGeometry, fluidMaterial);
+        const displayMesh = new THREE.Mesh(sharedGeometry, displayMaterial);
         const container = canvasRef.current;
-        if (container) {
-            container.appendChild(renderer.domElement);
-        }
+        if (container) { container.appendChild(renderer.domElement); }
 
-        let resizeTimeout: NodeJS.Timeout;
         const handleResize = () => {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(() => {
+                if (!mounted || !canvasRef.current) return;
                 const w = window.innerWidth;
                 const h = window.innerHeight;
+                const lowWn = Math.floor(w * lowResScale);
+                const lowHn = Math.floor(h * lowResScale);
+
                 renderer.setSize(w, h);
-                fluidMaterial.uniforms.iResolution.value.set(w, h);
+                fluidMaterial.uniforms.iResolution.value.set(lowWn, lowHn);
                 displayMaterial.uniforms.iResolution.value.set(w, h);
-                fluidTarget1.setSize(w, h);
-                fluidTarget2.setSize(w, h);
+                fluidTarget1.setSize(lowWn, lowHn);
+                fluidTarget2.setSize(lowWn, lowHn);
                 frameCount = 0;
-            }, 150);
+            }, resizeDebounce);
         };
         window.addEventListener("resize", handleResize);
 
         const handleVisibilityChange = () => {
             isTabActive = !document.hidden;
-            if (isTabActive) {
-                render();
-            }
         };
         document.addEventListener("visibilitychange", handleVisibilityChange);
 
-        const render = () => {
-            if (!isTabActive) return;
+        const observer = new IntersectionObserver(([entry]) => {
+            isInViewport = entry.isIntersecting;
+        });
+        if (container) observer.observe(container);
+
+        let frameTimes: number[] = [];
+        const render = (time: number) => {
+            if (!mounted) return;
             animationFrameId = requestAnimationFrame(render);
+
+            if (!isTabActive || !isInViewport) return;
+
+            const delta = time - lastTime;
+            if (delta < 1000 / fpsTarget) return;
+            lastTime = time;
 
             const now = performance.now() * 0.001;
 
@@ -120,15 +143,30 @@ export default function Background() {
 
             [currentTarget, previousTarget] = [previousTarget, currentTarget];
             frameCount++;
+
+            if (adaptiveFallback) {
+                const frameTime = delta;
+                frameTimes.push(frameTime);
+                if (frameTimes.length > 60) {
+                    const avg = frameTimes.reduce((a, b) => a + b, 0) / frameTimes.length;
+                    frameTimes = [];
+                    if (avg > 35 && pixelRatio > 1) {
+                        pixelRatio = Math.max(1, pixelRatio - 0.25);
+                        renderer.setPixelRatio(pixelRatio);
+                    }
+                }
+            }
         };
 
-        render();
+        render(0);
 
         return () => {
+            mounted = false;
             cancelAnimationFrame(animationFrameId);
+            clearTimeout(resizeTimeout);
             window.removeEventListener("resize", handleResize);
             document.removeEventListener("visibilitychange", handleVisibilityChange);
-            clearTimeout(resizeTimeout);
+            observer.disconnect();
 
             if (container && renderer.domElement) {
                 container.removeChild(renderer.domElement);
@@ -139,9 +177,7 @@ export default function Background() {
             fluidTarget2.dispose();
             fluidMaterial.dispose();
             displayMaterial.dispose();
-            geometry.dispose();
         };
     }, []);
-
-    return <div className="backgroundCanvas" ref={canvasRef} />;
+    return <div className="backgroundCanvas" ref={canvasRef} arial-hidden="true" />;
 }

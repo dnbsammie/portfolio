@@ -1,20 +1,20 @@
 footer {
     display: flex;
     bottom: 0;
-    height: 80vh;
+    height: fit-content;
     width: 100%;
     z-index: 1;
     flex-direction: column;
     justify-content: space-between;
-    background: var(--gray-100);
+    background: var(--gray-200);
     color: var(--gray-300);
-    padding: var(--pad-3) var(--pad-2);
+    padding: var(--pad-2);
+    gap: var(--gap-2);
     align-items: center;
 }
 
 footer h1,
-footer h2,
-footer h4 {
+footer h5 {
     color: var(--gray-400);
     text-transform: uppercase;
 }
@@ -35,18 +35,20 @@ footer h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: var(--gap-2);
 }
 
 .f_column {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-3);
+    gap: var(--gap-2);
     width: 100%;
 }
 
 .f_foot {
     display: flex;
     justify-content: space-between;
+    padding-top: var(--pad-2);
 }
 
 
@@ -59,12 +61,20 @@ footer h4 {
 }
 
 .email_link {
-    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-size: clamp(1rem, 3vw, 2rem);
 }
 
-@media (min-width:960px) {
+.email_link:hover {
+    color: var(--gray-400);
+}
+
+@media (min-width:900px) {
     footer {
-        padding: var(--pad-3);
+        padding: var(--pad-2);
+    }
+
+    .f_head h1 {
+        letter-spacing: 1vw;
     }
 
     .f_content {
@@ -73,6 +83,7 @@ footer h4 {
     }
 
     .f_column {
+        min-width: 22ch;
         width: min-content;
         gap: var(--gap-1);
     }
