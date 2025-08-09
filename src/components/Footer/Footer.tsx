@@ -17,7 +17,7 @@ export const Footer = () => {
                     <h5>follow me</h5>
                     <ul>
                         <li><a href="https://codepen.io/dnbsammie" target="_blank" aria-label="codepen">Codepen</a></li>
-                        <li><a href="https://www.youtube.com/@dnbsammie" target="_blank" aria-label="youtube">ColorsWall</a></li>
+                        <li><a href="https://colorswall.com/users/3710" target="_blank" aria-label="youtube">ColorsWall</a></li>
                         <li><a href="https://github.com/dnbsammie" target="_blank" aria-label="github">Github</a></li>
                         <li><a href="https://www.linkedin.com/in/seriveramosq" target="_blank" aria-label="linkedin">LinkedIn</a></li>
                         <li><a href="https://www.youtube.com/@dnbsammie" target="_blank" aria-label="youtube">Youtube</a></li>

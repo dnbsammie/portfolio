@@ -17,13 +17,7 @@ const App: React.FC = () => {
       {loading && <Preloader onComplete={() => setLoading(false)} />}
       <Navbar />
       <Background />
-      <main
-        role="main"
-        style={{
-          opacity: loading ? 0 : 1,
-          transition: "opacity 1.5s ease",
-        }}
-      >
+      <main role="main" style={{ opacity: loading ? 0 : 1, transition: "opacity 1.5s ease", }}>
         <Hero />
         <Projects />
       </main>

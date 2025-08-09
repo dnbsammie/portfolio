@@ -106,7 +106,7 @@
     text-align: center;
     font-family: "Questrial", sans-serif;
     text-transform: lowercase;
-    font-size: clamp(5rem, 9vw, 7.5rem);
+    font-size: clamp(2.5rem, 5vw, 7.5rem);
     line-height: 0.8;
     color: var(--gray-400);
     transition: letter-spacing 0.3s;
@@ -130,7 +130,7 @@
 }
 
 .menu-item a {
-    font-size: clamp(5rem, 9vw, 7.5rem);
+    font-size: clamp(2.5rem, 5vw, 7.5rem);
     text-decoration: none;
     color: var(--gray-400);
 }
