@@ -129,7 +129,7 @@ main {
 
 section {
   position: relative;
-  height: 100vh;
+  height: 100svh;
   width: 100%;
   padding: var(--pad-2);
 }
@@ -168,4 +168,10 @@ hr {
   z-index: -1;
   pointer-events: none;
   overflow: hidden;
+}
+
+@media (min-width:768px) {
+  section {
+    height: 100vh;
+  }
 }
