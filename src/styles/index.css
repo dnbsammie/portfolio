@@ -32,11 +32,13 @@ body {
   color: var(--gray-200);
   overflow-x: hidden;
   scroll-behavior: smooth;
+  height: --webkit-fill-available;
 }
 
 html {
   font-size: 100%;
   scrollbar-width: none;
+  height: --webkit-fill-available;
 }
 
 ::-webkit-scrollbar {
