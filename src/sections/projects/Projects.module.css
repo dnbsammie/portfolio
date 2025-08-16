@@ -56,8 +56,9 @@
     mix-blend-mode: difference;
 }
 
-.title h2 {
-    text-transform: lowercase;
+.title h1 {
+    text-transform: uppercase;
+    font-weight: 300;
     color: var(--gray-200);
     margin: 0;
 }
@@ -122,7 +123,7 @@
 }
 
 .links a:hover {
-    color: var(--accent-c);
+    color: var(--ember-500);
 }
 
 

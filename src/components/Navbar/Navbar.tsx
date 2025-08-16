@@ -72,7 +72,6 @@ export const Navbar = () => {
                         </p>
                     </div>
                 </menu>
-
                 <div className={styles["sub-nav"]} ref={subNavRef}>
                     <a href="mailto:seriveramosq@gmail.com" className="fa-solid fa-paper-plane" aria-label="email"></a>
                     <a href="https://www.linkedin.com/in/seriveramosq" className="fa-brands fa-linkedin-in" target="_blank" aria-label="linkedin"></a>

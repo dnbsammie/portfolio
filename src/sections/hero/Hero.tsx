@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
+// import NeonButton from '../../components/NeonButton/NeonButton';
 import styles from "./Hero.module.css";
 
 const Hero = () => {
@@ -32,6 +33,12 @@ const Hero = () => {
             <div className={styles.hero_title}>
                 <h5>Hi, I'm Samuel</h5>
                 <h1>I craft <span className="text_accent">Experiences</span><br />that Matter</h1>
+                {/* <NeonButton
+                    text=""
+                    href=""
+                    hsl={{ h: 0, s: "0%", l: "94%" }}
+                    textHsl={{ h: 0, s: "0%", l: "6%" }}
+                /> */}
             </div>
             <div className={styles.hero_sides}>
                 <Link to="projects" smooth={true} duration={600} className={styles.vertical_link}>SCROLL DOWN</Link>

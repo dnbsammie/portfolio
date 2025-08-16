@@ -18,8 +18,7 @@
 }
 
 .preloader h2 {
-    font-family: "Questrial", sans-serif;
-    font-size: clamp(40px, 8vw, 6rem);
+    font-family: "Mozilla Text", sans-serif;
     color: var(--gray-200);
     opacity: 0;
     transform: translateY(225px);

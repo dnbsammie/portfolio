@@ -7,7 +7,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     background: var(--gray-200);
-    color: var(--gray-300);
+    color: var(--gray-800);
     padding: var(--pad-2);
     gap: var(--gap-2);
     align-items: center;
@@ -15,7 +15,7 @@ footer {
 
 footer h1,
 footer h5 {
-    color: var(--gray-400);
+    color: var(--gray-900);
     text-transform: uppercase;
 }
 
@@ -45,6 +45,14 @@ footer h5 {
     width: 100%;
 }
 
+.f_content a {
+    text-transform: uppercase;
+}
+
+.f_column a:hover {
+    text-decoration: underline;
+}
+
 .f_foot {
     display: flex;
     justify-content: space-between;
@@ -57,15 +65,12 @@ footer h5 {
     display: flex;
     flex-direction: column;
     gap: var(--gap-2);
-    text-transform: uppercase;
 }
 
 .email_link {
-    font-size: clamp(1rem, 3vw, 2rem);
-}
-
-.email_link:hover {
-    color: var(--gray-400);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
 }
 
 @media (min-width:900px) {

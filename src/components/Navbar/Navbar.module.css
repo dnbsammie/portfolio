@@ -18,7 +18,7 @@
 .logo {
     text-align: center;
     text-transform: lowercase;
-    font-family: "Questrial", sans-serif;
+    font-family: "Mozilla Text", sans-serif;
 }
 
 .logo a {
@@ -104,17 +104,17 @@
 .menu-item p {
     position: relative;
     text-align: center;
-    font-family: "Questrial", sans-serif;
-    text-transform: lowercase;
+    font-family: "Mozilla Text", sans-serif;
+    text-transform: uppercase;
     font-size: clamp(2.5rem, 5vw, 7.5rem);
     line-height: 0.8;
-    color: var(--gray-400);
+    color: var(--ember-500);
     transition: letter-spacing 0.3s;
     will-change: transform;
 }
 
 .menu-item p:hover {
-    letter-spacing: 0.075em;
+    letter-spacing: 0.1em;
 }
 
 .menu-item p::after {
@@ -123,8 +123,8 @@
     top: 45%;
     left: 0;
     transform: translateY(-50%);
-    background: var(--gray-300);
-    height: 6px;
+    background: var(--ember-500);
+    height: 5px;
     width: 0%;
     pointer-events: none;
 }
@@ -132,7 +132,7 @@
 .menu-item a {
     font-size: clamp(2.5rem, 5vw, 7.5rem);
     text-decoration: none;
-    color: var(--gray-400);
+    color: var(--gray-900);
 }
 
 .menu-item p.active::after {
@@ -150,7 +150,7 @@
     line-height: 0.5;
     width: fit-content;
     gap: var(--gap-3);
-    color: var(--gray-300);
+    color: var(--gray-800);
     opacity: 0;
 }
 

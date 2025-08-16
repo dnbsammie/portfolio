@@ -1,10 +1,10 @@
 .hero {
     display: flex;
+    align-items: center;
+    text-align: center;
     flex-direction: row;
     justify-content: space-between;
     background: transparent;
-    align-items: center;
-    text-align: center;
     transition: opacity 0.6s ease, pointer-events 0.6s ease;
 }
 
@@ -29,7 +29,7 @@
 .hero_sides {
     position: relative;
     height: 100%;
-    width: var(--pad-2);
+    width: fit-content;
     gap: var(--gap-1);
     display: flex;
     flex-direction: column;
