@@ -57,9 +57,9 @@
 }
 
 .title h1 {
-    text-transform: uppercase;
-    font-weight: 300;
-    color: var(--gray-200);
+    writing-mode: vertical-lr;
+    font-weight: 600;
+    color: var(--gray-100);
     margin: 0;
 }
 

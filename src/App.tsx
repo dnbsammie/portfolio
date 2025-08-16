@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Preloader } from "./components/Preloader/Preloader";
 import { Navbar } from "./components/Navbar/Navbar";
-import Background from "./components/Background/Background";
+// import Background from "./components/Background/Background";
 import Hero from "./sections/hero/Hero";
 import Projects from "./sections/projects/Projects";
 import { Footer } from "./components/Footer/Footer";
@@ -16,7 +16,7 @@ const App: React.FC = () => {
     <>
       {loading && <Preloader onComplete={() => setLoading(false)} />}
       <Navbar />
-      <Background />
+      {/* <Background /> */}
       <main role="main" style={{ opacity: loading ? 0 : 1, transition: "opacity 1.5s ease", }}>
         <Hero />
         <Projects />
