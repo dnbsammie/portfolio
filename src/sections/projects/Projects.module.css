@@ -83,6 +83,8 @@
 
 .project:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 10px var(--gray-800),
+        0 0 20px var(--gray-900);
 }
 
 .project:hover img {

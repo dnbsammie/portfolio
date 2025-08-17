@@ -14,11 +14,11 @@ export const Footer = () => {
     return (
         <footer id="footer" className={styles.contact} aria-labelledby="footer-section">
             <hr />
-            <div className={styles.f_head} id="footer_head">
+            <div className={styles.f_top} id="footer_top">
                 <h1>get in touch</h1>
             </div>
-            <div className={styles.f_content} id="footer_content">
-                <div className={styles.f_column} id="footer_column">
+            <div className={styles.f_mid} id="footer_mid">
+                <div className={styles.f_column_l} id="footer_column">
                     <p>Do you have an idea or project in mind?<br /> Let's talk about it.</p>
                     <div className={styles.email_btn} tabIndex={0}>
                         <a href="mailto:seriveramosq@gmail.com" className={styles.email_text} target="_blank" rel="noopener noreferrer">seriveramosq@gmail.com</a>
@@ -28,7 +28,7 @@ export const Footer = () => {
 
                     </div>
                 </div>
-                <div className={styles.f_column} id="footer_column">
+                <div className={styles.f_column_r} id="footer_column">
                     <div className={styles.f_lists} id="footer_social">
                         <h5>social:</h5>
                         <ul>
@@ -48,16 +48,16 @@ export const Footer = () => {
                             <hr />
                             <li><Link to="projects" smooth={true} duration={700} aria-label="back to top">Work</Link></li>
                             <hr />
-                            <li><Link to="projects" smooth={true} duration={600} aria-label="back to top">About</Link></li>
+                            <li><Link to="about" smooth={true} duration={500} aria-label="back to top">About</Link></li>
                             <hr />
-                            <li><Link to="projects" smooth={true} duration={500} aria-label="back to top">Services</Link></li>
+                            <li><Link to="projects" smooth={true} duration={400} aria-label="back to top">Services</Link></li>
                         </ul>
                     </div>
                 </div>
 
             </div>
             <hr />
-            <div className={styles.f_foot} id='footer-foot'>
+            <div className={styles.f_bot} id='footer-bottom'>
                 <p className="copyright" aria-label="copyright">&copy; {currentYear} Samuel Rivera.</p>
                 <Link to="hero" smooth={true} duration={600} className="fa-solid fa-chevron-up" aria-label="back to top"></Link>
             </div>

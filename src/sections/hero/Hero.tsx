@@ -9,7 +9,7 @@ const Hero = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
-            const newOpacity = Math.max(1 - scrollY / 50, 0);
+            const newOpacity = Math.max(1 - scrollY / 100, 0);
             setOpacity(newOpacity);
         };
 

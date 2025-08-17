@@ -7,11 +7,6 @@
     transition: opacity 0.5s ease, pointer-events 0.5s ease;
 }
 
-.hero .container {
-    display: flex;
-
-}
-
 .hero_title {
     position: fixed;
     display: flex;

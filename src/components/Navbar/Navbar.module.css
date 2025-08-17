@@ -28,6 +28,7 @@
 
 .logo a:hover {
     color: var(--gray-100);
+    text-decoration: underline;
 }
 
 .toggle-btn {

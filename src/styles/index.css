@@ -3,9 +3,9 @@
 :root {
   --gray-100: hsl(0, 0%, 94%);
   --gray-200: hsl(0, 0%, 86%);
-  --ember-300: hsl(11, 100%, 75%);
-  --ember-500: hsl(11, 100%, 65%);
-  --ember-700: hsl(11, 100%, 45%);
+  --ember-300: hsl(7, 100%, 69%);
+  --ember-500: hsl(4, 87%, 61%);
+  --ember-700: hsl(2, 53%, 38%);
   --gray-800: hsl(0, 0%, 16%);
   --gray-900: hsl(0, 0%, 4%);
   --pad-1: min(2%, 15px);
@@ -65,7 +65,7 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(3.5rem, 5vw, 7.5rem);
+  font-size: clamp(2.5rem, 5vw, 7.5rem);
 }
 
 h2 {
@@ -87,7 +87,7 @@ h5 {
 h6,
 p,
 a {
-  font-size: clamp(1rem, 1.25vw, 1.25rem);
+  font-size: clamp(0.75rem, 1.25vw, 1.25rem);
 }
 
 small {

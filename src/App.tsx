@@ -5,6 +5,7 @@ import { Preloader } from "./components/Preloader/Preloader";
 import { Navbar } from "./components/Navbar/Navbar";
 import Hero from "./sections/hero/Hero";
 import Projects from "./sections/projects/Projects";
+import About from "./sections/about/About";
 import { Footer } from "./components/Footer/Footer";
 gsap.registerPlugin(useGSAP);
 
@@ -21,6 +22,7 @@ const App: React.FC = () => {
       <main role="main" style={{ opacity: loading ? 0 : 1, transition: "opacity 1.5s ease", }}>
         <Hero />
         <Projects />
+        <About />
       </main>
       <Footer />
     </>

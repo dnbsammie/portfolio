@@ -67,6 +67,11 @@ export const Navbar = () => {
                         </p>
                     </div>
                     <div className={styles["menu-item"]} ref={(el) => { if (el) menuItemsRef.current[2] = el; }}>
+                        <p className={activeItem === "about" ? styles.active : ""}>
+                            <Link to="about" spy={true} smooth={true} duration={500} onClick={() => handleNavClick("about")}>about</Link>
+                        </p>
+                    </div>
+                    <div className={styles["menu-item"]} ref={(el) => { if (el) menuItemsRef.current[3] = el; }}>
                         <p className={activeItem === "footer" ? styles.active : ""}>
                             <Link to="footer" spy={true} smooth={true} duration={500} onClick={() => handleNavClick("footer")}>contact</Link>
                         </p>

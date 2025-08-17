@@ -30,32 +30,37 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.f_head,
-.f_content,
-.f_foot {
+.f_top,
+.f_mid,
+.f_bot {
     width: 100%;
     max-width: var(--max-width);
 }
 
-.f_head {
+.f_top {
     height: fit-content;
 }
 
-.f_content {
-    flex: 1;
+.f_mid {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: var(--gap-2);
 }
 
-.f_column {
+.f_column_l,
+.f_column_r {
+    flex: 1;
     display: flex;
-    flex-direction: column;
-    gap: var(--gap-2);
+    gap: var(--gap-3);
 }
 
-.f_column:nth-child(2) {
+.f_column_l {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.f_column_r {
     flex-direction: row;
     justify-content: space-around;
 }
@@ -74,6 +79,7 @@ footer a:hover {
 .email_text {
     letter-spacing: 2px;
     text-transform: uppercase;
+    color: var(--gray-200);
     font-size: clamp(1rem, 2vw, 1.5rem);
     user-select: all;
     cursor: pointer;
@@ -112,7 +118,7 @@ footer a:hover {
     width: 20ch;
 }
 
-.f_foot {
+.f_bot {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -122,13 +128,14 @@ footer a:hover {
 }
 
 @media (min-width:768px) {
-    .f_head h1 {
+    .f_top h1 {
         letter-spacing: 1vw;
     }
 
-    .f_content {
+    .f_mid {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         gap: var(--gap-3);
     }
 
