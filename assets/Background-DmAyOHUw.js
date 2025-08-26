@@ -1,4 +1,4 @@
-import{r as Vs,j as Eo}from"./index-BQGHRT1R.js";/**
+import{r as Vs,j as Eo}from"./index-BIDVflAI.js";/**
  * @license
  * Copyright 2010-2025 Three.js Authors
  * SPDX-License-Identifier: MIT
