@@ -1,55 +1,89 @@
 .hero {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: transparent;
-    transition: opacity 0.5s ease, pointer-events 0.5s ease;
+    justify-content: space-between;
 }
 
-.hero_title {
-    position: fixed;
+.left,
+.right {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: var(--pad-3);
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: var(--gap-1);
-    height: 100%;
-    width: fit-content;
-}
-
-.hero_title h1 {
-    max-width: 15ch;
-}
-
-.hero_title h5 {
-    color: var(--gray-200);
-}
-
-.hero_sides {
-    position: relative;
+    justify-content: flex-end;
+    text-align: center;
     height: 100%;
     width: 100%;
     max-width: var(--max-width);
-    gap: var(--gap-1);
+}
+
+.left {
+    height: 25vh;
+    align-items: flex-end;
+    background: var(--gray-100);
+}
+
+.right {
+    height: 75;
+    align-items: flex-start;
+    color: var(--gray-200);
+}
+
+.right .split {
+    gap: var(--gap-3);
+}
+
+.right .split .socials {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    overflow: hidden;
-}
-
-.vertical_link {
+    height: fit-content;
+    width: fit-content;
+    gap: var(--gap-3);
     color: var(--gray-200);
-    writing-mode: vertical-lr;
-    white-space: nowrap;
-    max-height: 100%;
-    max-width: 100%;
-    text-align: left;
 }
 
-@media(min-width:768px) {
-    .hero_title h1 {
-        max-width: 20ch;
+.socials a {
+    text-decoration: none;
+    transition: all .4s ease;
+}
+
+.socials a:hover {
+    text-decoration: none;
+    transform: scale(1.1);
+    color: var(--gray-100);
+}
+
+@media (min-width:900px) {
+    .hero {
+        flex-direction: row;
+    }
+
+    .left,
+    .right {
+        width: 50vw;
+        height: 100vh;
+    }
+
+    .split {
+        justify-content: center;
+        gap: var(--gap-3);
+    }
+
+    .left .split {
+        text-align: center;
+        align-items: center;
+    }
+
+    .right .split {
+        text-align: left;
+        align-items: flex-start;
+        justify-content: flex-end;
     }
 }

@@ -1,69 +1,65 @@
 .about {
-    background: var(--gray-100);
-    max-width: var(--max-width);
-    padding: var(--pad-3);
-    color: var(--gray-800);
-    height: fit-content;
-    gap: var(--gap-2);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 0 10px var(--gray-200);
 }
 
-.about h1,
-.about h2,
-.about h3,
-.about h4,
-.about h5 {
-    color: var(--gray-900);
-}
-
-.bio {
-    flex: 1;
+.left,
+.right {
+    height: 50vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    padding: var(--pad-3);
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: left;
     gap: var(--gap-2);
+    height: 100%;
+    width: 100%;
+    max-width: var(--max-width);
 }
 
-.lists {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--gap-2);
+.left {
+    align-items: flex-end;
+    background: var(--gray-100);
 }
 
-
-.about li {
-    margin-bottom: 1.5em;
-    padding: 1em;
-    border-left: 4px solid var(--ember-300);
-    background-color: var(--gray-800);
-    color: var(--gray-200);
+.left .split {
+    justify-content: flex-end;
 }
 
-.date {
-    display: block;
-    font-weight: bold;
-    font-size: clamp(0.5rem, 1vw, 1rem);
-    color: hsl(from var(--gray-900) h s 25%);
-    margin-bottom: 0.3em;
+.right {
+    align-items: flex-start;
 }
 
-.institution {
-    display: block;
-    font-size: clamp(0.75rem, 1.25vw, 1.25rem);
-    color: var(--gray-100);
+.right .split {
+    align-items: center;
+    justify-content: center;
 }
 
-.degree {
-    display: block;
-    font-size: clamp(0.5rem, 1vw, 1rem);
-    color: var(--gray-200);
-}
-
-@media (min-width:768px) {
+@media (min-width:900px) {
     .about {
         flex-direction: row;
+    }
+
+    .left,
+    .right {
+        width: 50vw;
+        height: 100vh;
+    }
+
+    .split {
+        justify-content: center;
+    }
+
+    .right .split {
+        align-items: center;
+        justify-content: center;
     }
 }

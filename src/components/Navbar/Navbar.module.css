@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     padding: var(--pad-1);
-    color: var(--gray-200);
+    color: var(--gray-300);
     mix-blend-mode: difference;
     z-index: 2000;
 }
@@ -18,17 +18,16 @@
 .logo {
     text-align: center;
     text-transform: lowercase;
-    font-family: "Mozilla Text", sans-serif;
 }
 
 .logo a {
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
 .logo a:hover {
     color: var(--gray-100);
-    text-decoration: underline;
+    transition: all .4s ease;
 }
 
 .toggle-btn {
@@ -53,7 +52,7 @@
     display: block;
     width: 100%;
     height: 2px;
-    background: var(--gray-200);
+    background: var(--gray-300);
     transition: all 0.3s ease;
 }
 
@@ -69,6 +68,10 @@
     transform: translateY(-9px) rotate(-45deg);
 }
 
+.burger span:hover {
+    background: var(--gray-100);
+}
+
 /* === Menu Overlay === */
 .overlay {
     position: fixed;
@@ -76,7 +79,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: var(--gray-100);
+    background: var(--gray-900);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     display: flex;
     flex-direction: column;
@@ -106,11 +109,10 @@
 .menu-item p {
     position: relative;
     text-align: center;
-    font-family: "Mozilla Text", sans-serif;
     text-transform: uppercase;
-    font-size: clamp(2.5rem, 5vw, 7.5rem);
+    font-size: clamp(2rem, 6vw, 4rem);
     line-height: 0.8;
-    color: var(--ember-500);
+    color: var(--gray-200);
     transition: letter-spacing 0.3s;
     will-change: transform;
 }
@@ -125,16 +127,16 @@
     top: 45%;
     left: 0;
     transform: translateY(-50%);
-    background: var(--ember-500);
+    background: var(--gray-200);
     height: 5px;
     width: 0%;
     pointer-events: none;
 }
 
 .menu-item a {
-    font-size: clamp(2.5rem, 5vw, 7.5rem);
+    font-size: clamp(2rem, 6vw, 4rem);
     text-decoration: none;
-    color: var(--gray-900);
+    color: var(--gray-100);
 }
 
 .menu-item p.active::after {
@@ -152,17 +154,17 @@
     line-height: 0.5;
     width: fit-content;
     gap: var(--gap-3);
-    color: var(--gray-800);
+    color: var(--gray-200);
     opacity: 0;
 }
 
 .sub-nav a {
     text-decoration: none;
-    transition: color .4s ease;
+    transition: all .4s ease;
 }
 
 .sub-nav a:hover {
     text-decoration: none;
     transform: scale(1.1);
-    filter: brightness(0.8);
+    color: var(--gray-100);
 }

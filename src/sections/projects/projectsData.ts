@@ -13,7 +13,6 @@ type ProjectLink = {
 type Project = {
     title: string;
     img: string;
-    orientation: "horizontal" | "vertical";
     links: ProjectLink[];
 };
 
@@ -21,44 +20,37 @@ export const projectsData: Project[] = [
     {
         title: "ordo",
         img: img01,
-        orientation: "horizontal",
         links: [
             { href: "https://github.com/dnbsammie/Ordo", label: "github", icon: "fa-brands fa-github" },
-            { href: "#", label: "youtube", icon: "fa-brands fa-youtube" },
+            // { href: "#", label: "youtube", icon: "fa-brands fa-youtube" },
+        ],
+    }, {
+        title: "aural",
+        img: img02,
+        links: [
+            { href: "https://github.com/dnbsammie/Aural", label: "github", icon: "fa-brands fa-github" },
         ],
     },
     {
         title: "soundmorph",
-        img: img02,
-        orientation: "vertical",
+        img: img03,
         links: [
             { href: "https://github.com/dnbsammie/SoundMorph", label: "github", icon: "fa-brands fa-github" },
-            { href: "#", label: "web", icon: "fa-solid fa-link" }
-        ],
-    },
-    {
-        title: "aural",
-        img: img03,
-        orientation: "horizontal",
-        links: [
-            { href: "https://github.com/dnbsammie/Aural", label: "github", icon: "fa-brands fa-github" },
-            { href: "#", label: "web", icon: "fa-solid fa-link" }
-        ],
-    },
-    {
-        title: "trinity",
-        img: img04,
-        orientation: "vertical",
-        links: [
-            { href: "https://github.com/dnbsammie/Trinity", label: "github", icon: "fa-brands fa-github" },
+            // { href: "#", label: "web", icon: "fa-solid fa-link" }
         ],
     },
     {
         title: "overdrive",
-        img: img05,
-        orientation: "horizontal",
+        img: img04,
         links: [
-            { href: "https://github.com/dnbsammie/Overdrive", label: "github", icon: "fa-brands fa-github" },
+            { href: "https://github.com/dnbsammie/overdrive", label: "github", icon: "fa-brands fa-github" },
+        ],
+    },
+    {
+        title: "trinity",
+        img: img05,
+        links: [
+            { href: "https://github.com/dnbsammie/Trinity", label: "github", icon: "fa-brands fa-github" },
         ],
     },
 ];

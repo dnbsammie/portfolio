@@ -4,9 +4,10 @@ import { useGSAP } from "@gsap/react";
 import { Preloader } from "./components/Preloader/Preloader";
 import { Navbar } from "./components/Navbar/Navbar";
 import Hero from "./sections/hero/Hero";
-import Projects from "./sections/projects/Projects";
 import About from "./sections/about/About";
-import { Footer } from "./components/Footer/Footer";
+import Projects from "./sections/projects/Projects";
+// import Blog from "./sections/blog/Blog";
+import Contact from "./sections/contact/Contact";
 gsap.registerPlugin(useGSAP);
 
 const Background = lazy(() => import("./components/Background/Background"));
@@ -19,12 +20,12 @@ const App: React.FC = () => {
       {loading && <Preloader onComplete={() => setLoading(false)} />}
       <Navbar />
       <Background />
-      <main role="main" style={{ opacity: loading ? 0 : 1, transition: "opacity 1.5s ease", }}>
+      <main role="main" style={{ opacity: loading ? 0 : 1, transition: "opacity 1.5s ease", }} >
         <Hero />
-        <Projects />
         <About />
+        <Projects />
+        <Contact />
       </main>
-      <Footer />
     </>
   );
 };

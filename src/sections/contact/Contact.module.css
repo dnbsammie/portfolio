@@ -1,0 +1,111 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    bottom: 0;
+}
+
+.left,
+.right {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--pad-3);
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+.left {
+    align-items: flex-end;
+}
+
+.left .split {
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    background: var(--gray-100);
+    justify-content: flex-start;
+}
+
+.right .split {
+    justify-content: space-between;
+}
+
+
+.email {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-1);
+}
+
+.email_text {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    user-select: all;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: color 0.2s ease-in-out;
+}
+
+.right a {
+    position: relative;
+    text-decoration: none;
+    width: fit-content;
+    color: inherit;
+    user-select: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.right a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: 2px;
+    background-color: var(--gray-900);
+    transition: transform 0.3s ease-in-out;
+}
+
+.right a:hover {
+    color: var(--gray-900);
+    cursor: pointer;
+}
+
+.right a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.footer a {
+    font-size: clamp(0.5rem, 1vw, 1.5rem);
+}
+
+@media (min-width:900px) {
+    .contact {
+        flex-direction: row;
+    }
+
+    .left,
+    .right {
+        width: 50vw;
+        height: 100vh;
+    }
+}

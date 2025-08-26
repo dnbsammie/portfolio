@@ -1,20 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Mozilla+Text:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 :root {
   --gray-100: hsl(0, 0%, 94%);
   --gray-200: hsl(0, 0%, 86%);
-  --ember-300: hsl(7, 100%, 69%);
-  --ember-500: hsl(4, 87%, 61%);
-  --ember-700: hsl(2, 53%, 38%);
-  --gray-800: hsl(0, 0%, 16%);
+  --gray-300: hsl(0, 0%, 74%);
+  --gray-400: hsl(0, 0%, 60%);
+  --gray-500: hsl(0, 0%, 48%);
+  --gray-600: hsl(0, 0%, 36%);
+  --gray-700: hsl(0, 0%, 24%);
+  --gray-800: hsl(0, 0%, 14%);
   --gray-900: hsl(0, 0%, 4%);
   --pad-1: min(2%, 15px);
   --pad-2: min(4%, 30px);
   --pad-3: min(8%, 60px);
-  --gap-1: clamp(0.5rem, 1vw, 2.5rem);
-  --gap-2: clamp(1rem, 2vw, 5rem);
-  --gap-3: clamp(1.5rem, 3vw, 7.5rem);
-  --max-width: 1440px;
+  --gap-1: clamp(0.5rem, 0.75vw, 1rem);
+  --gap-2: clamp(1rem, 1.25vw, 3rem);
+  --gap-3: clamp(1.5rem, 1.75vw, 5rem);
+  --max-width: 600px;
 }
 
 /* Basic reset */
@@ -28,18 +30,19 @@
 }
 
 body {
-  font-size: 100%;
-  font-family: 'JetBrains Mono';
+  font-family: "Questrial", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
   font-weight: 300;
   background: var(--gray-900);
-  color: var(--gray-200);
+  color: var(--gray-700);
   overflow-x: hidden;
-  scroll-behavior: smooth;
   height: -webkit-fill-available;
 }
 
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
   scrollbar-width: none;
   height: -webkit-fill-available;
 }
@@ -55,80 +58,63 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Mozilla Text", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
-  text-transform: uppercase;
-  line-height: 0.9;
-  color: var(--gray-100);
+  color: var(--gray-900);
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 7.5rem);
+  font-size: clamp(4rem, 8vw, 6rem);
+  text-transform: uppercase;
+  letter-spacing: 1.5vw;
+  line-height: 0.8;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 5rem);
+  font-size: clamp(3rem, 6vw, 4rem);
+  text-transform: uppercase;
+  letter-spacing: 1vw;
 }
 
 h3 {
-  font-size: clamp(1.75rem, 3vw, 3rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
 }
 
 h4 {
-  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-size: clamp(2rem, 3vw, 3rem);
 }
 
-h5 {
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+h5,
+p {
+  font-size: clamp(1.5rem, 2vw, 2rem);
 }
 
 h6,
-p,
 a {
-  font-size: clamp(0.75rem, 1.25vw, 1.25rem);
+  font-size: clamp(1rem, 1.5vw, 1.75rem);
 }
 
 small {
-  font-size: clamp(0.5rem, 1vw, 0.75rem);
+  font-size: clamp(0.75rem, 1vw, 1.5rem);
 }
 
-.text_accent {
-  font-weight: 600;
+.vertical_text {
   color: var(--gray-100);
   mix-blend-mode: difference;
-  font-family: 'JetBrains Mono';
-}
-
-ul,
-ol {
-  list-style-type: none;
-  gap: var(--gap-2);
-  margin: 0;
-  padding: 0;
-}
-
-
-li {
-  padding: 5px 0px;
-  list-style: none;
 }
 
 /* === CTA ===*/
 a {
+  position: relative;
   text-decoration: none;
   color: inherit;
-  user-select: none;
   transition: color 0.2s ease-in-out;
 }
 
 a:hover {
-  color: var(--ember-500);
-  outline: none;
-  box-shadow: none;
+  color: var(--gray-900);
   cursor: pointer;
 }
+
 
 /* === Elements === */
 img {
@@ -136,8 +122,9 @@ img {
   height: auto;
   display: block;
   object-fit: cover;
-  background: var(--ember-500);
+  background: var(--gray-500);
   filter: saturate(0);
+  transition: filter 0.4s ease;
 }
 
 img:hover {
@@ -145,6 +132,7 @@ img:hover {
 }
 
 hr {
+  background-color: var(--gray-600);
   border: none;
   width: 100%;
   max-width: var(--max-width);
@@ -157,29 +145,6 @@ hr {
   z-index: -1;
   pointer-events: none;
   overflow: hidden;
-}
-
-.btn-neon {
-  --neon-mid: hsl(var(--h), var(--s), var(--l));
-  --text-color: hsl(var(--th), var(--ts), var(--tl));
-  position: relative;
-  display: inline-block;
-  padding: 15px 30px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: clamp(0.5rem, 1vw, 1.5rem);
-  overflow: hidden;
-  transition: 0.2s;
-  color: var(--text-color);
-  background: var(--neon-mid);
-}
-
-.btn-neon:hover {
-  background: var(--ember-300);
-  color: var(--gray-100);
-  box-shadow: 0 0 10px var(--ember-500),
-    0 0 20px var(--ember-300),
-    0 0 40px var(--ember-700);
 }
 
 /* === Content Row === */
@@ -196,13 +161,15 @@ main {
 
 section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  padding: var(--pad-2);
 }
 
-@media (min-width:768px) {
-  section {
-    height: 100vh;
+@media (min-width:900px) {
+  .vertical_text {
+    height: 100%;
+    text-align: center;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
   }
 }

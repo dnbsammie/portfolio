@@ -6,6 +6,7 @@ const Projects = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const scrollRef = useRef<HTMLDivElement>(null);
 
+
     useEffect(() => {
         const handleScroll = () => {
             if (!sectionRef.current || !scrollRef.current) return;
@@ -27,15 +28,22 @@ const Projects = () => {
             ref={sectionRef}
             aria-labelledby="projects-section">
             <div className={styles.sticky}>
-                {/* <canvas className={styles.outline_layer}></canvas> */}
-                <div className={styles.title}>
-                    <h1>projects</h1>
-                </div>
                 <div className={styles.scroll_section} ref={scrollRef}>
+                    <div className={styles.left}>
+                        <div className={styles.split}>
+                            <h1>Design <br /> Build <br /> Evolve</h1>
+                            <p>Each project I develop is an opportunity to learn,
+                                improve, and leave a tangible mark. It's not just about writing code,
+                                but about understanding the problem, designing with intention,
+                                and building with precision.
+                                These works reflect my commitment to constant improvement
+                                and to creating solutions that truly work, connect, and evolve.</p>
+                        </div>
+                    </div>
                     {projectsData.map((project, index) => (
                         <div
                             key={index}
-                            className={`${styles.project} ${styles[project.orientation]}`}
+                            className={styles.project}
                         >
                             <img src={project.img} alt={project.title} loading="lazy" />
                             <div className={styles.projectTitle}>{project.title}</div>
@@ -54,6 +62,11 @@ const Projects = () => {
                             </div>
                         </div>
                     ))}
+                    <div className={styles.right}>
+                        <div className={styles.split}>
+                            <h3>They are not just projects, they are experiences that matter.</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

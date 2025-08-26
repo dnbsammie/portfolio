@@ -18,7 +18,6 @@
 }
 
 .preloader h2 {
-    font-family: "Mozilla Text", sans-serif;
     color: var(--gray-200);
     opacity: 0;
     transform: translateY(225px);
