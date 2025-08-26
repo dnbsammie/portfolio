@@ -16,7 +16,7 @@
   --gap-1: clamp(0.5rem, 0.75vw, 1rem);
   --gap-2: clamp(1rem, 1.25vw, 3rem);
   --gap-3: clamp(1.5rem, 1.75vw, 5rem);
-  --max-width: 600px;
+  --max-width: 500px;
 }
 
 /* Basic reset */
@@ -63,32 +63,32 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(4rem, 8vw, 6rem);
+  font-size: clamp(3rem, 8vw, 6rem);
   text-transform: uppercase;
-  letter-spacing: 1.5vw;
+  letter-spacing: clamp(1rem, 1.5vw, 1.75rem);
   line-height: 0.8;
 }
 
 h2 {
-  font-size: clamp(3rem, 6vw, 4rem);
+  font-size: clamp(2rem, 6vw, 4rem);
   text-transform: uppercase;
-  letter-spacing: 1vw;
+  letter-spacing: clamp(0.75rem, 1vw, 1.5rem);
 }
 
 h3 {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-size: clamp(1.75rem, 4vw, 3.5rem);
 }
 
 h4 {
-  font-size: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
-h5,
-p {
-  font-size: clamp(1.5rem, 2vw, 2rem);
+h5 {
+  font-size: clamp(1.25rem, 2vw, 2rem);
 }
 
 h6,
+p,
 a {
   font-size: clamp(1rem, 1.5vw, 1.75rem);
 }

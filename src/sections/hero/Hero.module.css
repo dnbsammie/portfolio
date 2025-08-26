@@ -8,9 +8,8 @@
 .right {
     width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding: var(--pad-3);
+    padding: var(--pad-2);
 }
 
 .split {
@@ -21,18 +20,21 @@
     text-align: center;
     height: 100%;
     width: 100%;
+    gap: var(--gap-2);
     max-width: var(--max-width);
 }
 
 .left {
     height: 25vh;
+    justify-content: flex-end;
     align-items: flex-end;
     background: var(--gray-100);
 }
 
 .right {
-    height: 75;
+    height: 75vh;
     align-items: flex-start;
+    justify-content: flex-start;
     color: var(--gray-200);
 }
 
@@ -69,6 +71,7 @@
     .right {
         width: 50vw;
         height: 100vh;
+        padding: var(--pad-3);
     }
 
     .split {
