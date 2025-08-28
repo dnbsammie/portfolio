@@ -37,12 +37,12 @@
 }
 
 .burger {
+    cursor: none;
     position: relative;
     width: 28px;
     height: 20px;
     background: transparent;
     border: none;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -152,10 +152,10 @@
     transform: translateX(-50%);
     display: flex;
     flex-direction: row;
+    width: fit-content;
     height: fit-content;
     line-height: 0.5;
-    width: fit-content;
-    gap: var(--gap-3);
+    gap: var(--gap-4);
     color: var(--gray-200);
     opacity: 0;
 }

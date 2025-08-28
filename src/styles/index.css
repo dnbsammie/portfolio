@@ -14,8 +14,9 @@
   --pad-2: min(4%, 30px);
   --pad-3: min(8%, 60px);
   --gap-1: clamp(0.5rem, 0.75vw, 1rem);
-  --gap-2: clamp(1rem, 1.25vw, 3rem);
-  --gap-3: clamp(1.5rem, 1.75vw, 5rem);
+  --gap-2: clamp(1rem, 1.25vw, 2rem);
+  --gap-3: clamp(1.5rem, 1.75vw, 4rem);
+  --gap-4: clamp(2rem, 1.75vw, 6rem);
   --max-width: 900px;
 }
 
@@ -36,6 +37,7 @@ body {
   font-weight: 300;
   background: var(--gray-900);
   color: var(--gray-700);
+  cursor: none;
   overflow-x: hidden;
   height: -webkit-fill-available;
 }
@@ -63,16 +65,16 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 10vw, 7.5rem);
+  font-size: clamp(3rem, 7vw, 5rem);
   text-transform: uppercase;
-  letter-spacing: clamp(1rem, 1.5vw, 1.75rem);
+  letter-spacing: clamp(0.75rem, 1.5vw, 1.75rem);
   line-height: 0.8;
 }
 
 h2 {
   font-size: clamp(2rem, 6vw, 4rem);
   text-transform: uppercase;
-  letter-spacing: clamp(0.75rem, 1vw, 1.5rem);
+  letter-spacing: clamp(0.5rem, 1vw, 1.5rem);
 }
 
 h3 {
@@ -107,12 +109,12 @@ a {
   position: relative;
   text-decoration: none;
   color: inherit;
-  transition: color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 a:hover {
   color: var(--gray-900);
-  cursor: pointer;
+  cursor: none;
 }
 
 /* === Elements === */
@@ -138,6 +140,18 @@ hr {
   z-index: -1;
   pointer-events: none;
   overflow: hidden;
+}
+
+.customCursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: var(--gray-100, white);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9000;
+  transform: translate(-50%, -50%);
 }
 
 /* === Content Row === */

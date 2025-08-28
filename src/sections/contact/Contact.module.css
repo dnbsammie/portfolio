@@ -7,10 +7,11 @@
 
 .left,
 .right {
+    height: 50vh;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: var(--pad-2);
+    padding: var(--pad-3);
 }
 
 .split {
@@ -22,7 +23,6 @@
 }
 
 .left {
-    height: 30vh;
     align-items: flex-end;
 }
 
@@ -32,7 +32,6 @@
 }
 
 .right {
-    height: 70vh;
     background: var(--gray-100);
     justify-content: flex-start;
 }
@@ -49,7 +48,6 @@
 }
 
 .email_text {
-    font-size: clamp(1.5rem, 2vw, 2.5rem);
     user-select: all;
     cursor: pointer;
     margin-right: 15px;
@@ -76,6 +74,9 @@
     .right {
         width: 50vw;
         height: 100vh;
-        padding: var(--pad-3);
+    }
+
+    .split {
+        gap: var(--gap-3);
     }
 }

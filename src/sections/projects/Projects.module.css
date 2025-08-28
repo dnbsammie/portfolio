@@ -33,7 +33,7 @@
     width: 100vw;
     display: flex;
     justify-content: center;
-    padding: var(--pad-2);
+    padding: var(--pad-3);
     background-color: var(--gray-100);
 }
 
@@ -125,12 +125,15 @@
 }
 
 .links a {
-    color: var(--gray-100);
-    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all .4s ease;
+    color: var(--gray-200);
 }
 
 .links a:hover {
-    color: var(--gray-500);
+    text-decoration: none;
+    transform: scale(1.1);
+    color: var(--gray-100);
 }
 
 @media (min-width:900px) {
@@ -142,7 +145,10 @@
     .right {
         width: 50vw;
         height: 100vh;
-        padding: var(--pad-3);
+    }
+
+    .split {
+        gap: var(--gap-3);
     }
 }
 

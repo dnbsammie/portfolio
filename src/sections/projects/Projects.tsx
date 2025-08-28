@@ -31,7 +31,7 @@ const Projects = () => {
                 <div className={styles.scroll_section} ref={scrollRef}>
                     <div className={styles.left}>
                         <div className={styles.split}>
-                            <h1>Design <br /> Build <br /> Evolve</h1>
+                            <h2>Design <br /> Build <br /> Evolve</h2>
                             <p>Each project I develop is an opportunity to learn,
                                 improve, and leave a tangible mark. It's not just about writing code,
                                 but about understanding the problem, designing with intention,

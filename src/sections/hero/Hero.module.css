@@ -9,7 +9,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: var(--pad-2);
+    padding: var(--pad-3);
 }
 
 .split {
@@ -78,7 +78,6 @@
     .right {
         width: 50vw;
         height: 100vh;
-        padding: var(--pad-3);
     }
 
     .split {

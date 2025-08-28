@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Preloader } from "./components/Preloader/Preloader";
 import { Navbar } from "./components/Navbar/Navbar";
+import Cursor from "./components/Cursor/Cursor";
 import Hero from "./sections/hero/Hero";
 import About from "./sections/about/About";
 import Projects from "./sections/projects/Projects";
@@ -20,6 +21,7 @@ const App: React.FC = () => {
       {loading && <Preloader onComplete={() => setLoading(false)} />}
       <Navbar />
       <Background />
+      <Cursor />
       <main role="main" style={{ opacity: loading ? 0 : 1, transition: "opacity 1.5s ease", }} >
         <Hero />
         <About />

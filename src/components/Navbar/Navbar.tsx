@@ -49,7 +49,7 @@ export const Navbar = () => {
         <>
             <nav className={styles.nav} role="navigation" aria-label="main-nav">
                 <div></div>
-                <div className={`${styles.logo} hoverable`}><a href="./">s. rivera</a></div>
+                <div className={`${styles.logo} `}><a href="./">s. rivera</a></div>
                 <div className={styles["toggle-btn"]}>
                     <button className={`${styles.burger} ${isOpen ? styles.active : ""}`} onClick={toggleMenu} ref={burgerRef} aria-label="Toggle menu"><span /> <span /><span /></button>
                 </div>
@@ -83,11 +83,10 @@ export const Navbar = () => {
                     </div>
                 </menu>
                 <div className={styles["sub-nav"]} ref={subNavRef}>
-                    <a href="mailto:seriveramosq@gmail.com" className="fa-solid fa-paper-plane hoverable" aria-label="email"></a>
-                    <a href="https://www.linkedin.com/in/seriveramosq" className="fa-brands fa-linkedin-in hoverable" target="_blank" aria-label="linkedin"></a>
-                    <a href="https://github.com/dnbsammie" className="fa-brands fa-github hoverable" target="_blank" aria-label="github"></a>
-                    <a href="https://codepen.io/dnbsammie" className="fa-brands fa-codepen hoverable" target="_blank" aria-label="codepen"></a>
-                    <a href="https://www.youtube.com/@dnbsammie" className="fa-brands fa-youtube hoverable" target="_blank" aria-label="youtube"></a>
+                    <a href="mailto:seriveramosq@gmail.com" className="fa-solid fa-paper-plane" aria-label="email"></a>
+                    <a href="https://www.linkedin.com/in/seriveramosq" className="fa-brands fa-linkedin-in" target="_blank" aria-label="linkedin"></a>
+                    <a href="https://github.com/dnbsammie" className="fa-brands fa-github" target="_blank" aria-label="github"></a>
+                    <a href="https://codepen.io/dnbsammie" className="fa-brands fa-codepen" target="_blank" aria-label="codepen"></a>
                 </div>
             </div>
         </>
