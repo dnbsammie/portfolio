@@ -14,11 +14,11 @@ const Hero = () => {
                 <div className={styles.split}>
                     <p>Passionate about web development, I combine a solid foundation in Java and TypeScript with experience in React, Angular, and Spring Boot to create solutions that work as well as they look. I focus on building smooth, scalable products designed for the end user.</p>
                     <div className={styles.socials}>
-                        <a href="mailto:seriveramosq@gmail.com" className="fa-solid fa-paper-plane" aria-label="email"></a>
-                        <a href="https://www.linkedin.com/in/seriveramosq" className="fa-brands fa-linkedin-in" target="_blank" aria-label="linkedin"></a>
-                        <a href="https://github.com/dnbsammie" className="fa-brands fa-github" target="_blank" aria-label="github"></a>
-                        <a href="https://codepen.io/dnbsammie" className="fa-brands fa-codepen" target="_blank" aria-label="codepen"></a>
-                        <a href="https://www.youtube.com/@dnbsammie" className="fa-brands fa-youtube" target="_blank" aria-label="youtube"></a>
+                        <a href="mailto:seriveramosq@gmail.com" className="fa-solid fa-paper-plane hoverable" aria-label="email"></a>
+                        <a href="https://www.linkedin.com/in/seriveramosq" className="fa-brands fa-linkedin-in hoverable" target="_blank" aria-label="linkedin"></a>
+                        <a href="https://github.com/dnbsammie" className="fa-brands fa-github hoverable" target="_blank" aria-label="github"></a>
+                        <a href="https://codepen.io/dnbsammie" className="fa-brands fa-codepen hoverable" target="_blank" aria-label="codepen"></a>
+                        <a href="https://www.youtube.com/@dnbsammie" className="fa-brands fa-youtube hoverable" target="_blank" aria-label="youtube"></a>
                     </div>
                 </div>
             </div>

@@ -9,14 +9,14 @@
   --gray-600: hsl(0, 0%, 36%);
   --gray-700: hsl(0, 0%, 24%);
   --gray-800: hsl(0, 0%, 14%);
-  --gray-900: hsl(0, 0%, 4%);
+  --gray-900: hsl(0, 0%, 6%);
   --pad-1: min(2%, 15px);
   --pad-2: min(4%, 30px);
   --pad-3: min(8%, 60px);
   --gap-1: clamp(0.5rem, 0.75vw, 1rem);
   --gap-2: clamp(1rem, 1.25vw, 3rem);
   --gap-3: clamp(1.5rem, 1.75vw, 5rem);
-  --max-width: 500px;
+  --max-width: 900px;
 }
 
 /* Basic reset */
@@ -63,7 +63,7 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(2.5rem, 10vw, 7.5rem);
   text-transform: uppercase;
   letter-spacing: clamp(1rem, 1.5vw, 1.75rem);
   line-height: 0.8;
@@ -94,7 +94,7 @@ a {
 }
 
 small {
-  font-size: clamp(0.75rem, 1vw, 1.5rem);
+  font-size: clamp(0.5rem, 1vw, 1.5rem);
 }
 
 .vertical_text {
@@ -115,7 +115,6 @@ a:hover {
   cursor: pointer;
 }
 
-
 /* === Elements === */
 img {
   max-width: 100%;
@@ -123,12 +122,6 @@ img {
   display: block;
   object-fit: cover;
   background: var(--gray-500);
-  filter: saturate(0);
-  transition: filter 0.4s ease;
-}
-
-img:hover {
-  filter: saturate(100%);
 }
 
 hr {

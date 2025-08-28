@@ -6,8 +6,8 @@ const config = {
     trailLength: 0.8,
     color1: new THREE.Color("#0f0f0f"),
     color2: new THREE.Color("#282828"),
-    color3: new THREE.Color("#555555"),
-    color4: new THREE.Color("#828282"),
+    color3: new THREE.Color("#414141"),
+    color4: new THREE.Color("#5a5a5a"),
     colorIntensity: 1.0,
     softness: 1.0,
 };

@@ -7,7 +7,6 @@
 
 .left,
 .right {
-    height: 50vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -17,13 +16,13 @@
 .split {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
     width: 100%;
     max-width: var(--max-width);
 }
 
 .left {
+    height: 30vh;
     align-items: flex-end;
 }
 
@@ -33,6 +32,7 @@
 }
 
 .right {
+    height: 70vh;
     background: var(--gray-100);
     justify-content: flex-start;
 }
@@ -54,37 +54,6 @@
     cursor: pointer;
     margin-right: 15px;
     transition: color 0.2s ease-in-out;
-}
-
-.right a {
-    position: relative;
-    text-decoration: none;
-    width: fit-content;
-    color: inherit;
-    user-select: none;
-    transition: color 0.2s ease-in-out;
-}
-
-.right a::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%) scaleX(0);
-    transform-origin: center;
-    width: 100%;
-    height: 2px;
-    background-color: var(--gray-900);
-    transition: transform 0.3s ease-in-out;
-}
-
-.right a:hover {
-    color: var(--gray-900);
-    cursor: pointer;
-}
-
-.right a:hover::after {
-    transform: translateX(-50%) scaleX(1);
 }
 
 .footer {

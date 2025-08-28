@@ -6,7 +6,6 @@
 
 .left,
 .right {
-    height: 50vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -16,7 +15,6 @@
 .split {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-end;
     height: 100%;
     width: 100%;
@@ -25,6 +23,7 @@
 }
 
 .left {
+    height: 70vh;
     justify-content: flex-end;
     align-items: flex-end;
     background: var(--gray-100);
@@ -35,6 +34,7 @@
 }
 
 .right {
+    height: 30vh;
     align-items: flex-start;
     justify-content: flex-start;
 }

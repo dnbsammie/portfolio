@@ -40,8 +40,7 @@
 .split {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: flex-start;
     height: 100%;
     width: 100%;
     gap: var(--gap-2);
@@ -51,6 +50,11 @@
 .left {
     justify-content: flex-end;
     align-items: flex-end;
+    text-align: left;
+}
+
+.left .split {
+    justify-content: flex-end;
 }
 
 .right {
@@ -79,8 +83,8 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    /* transition: filter 0.4s ease;
-    filter: saturate(100%); */
+    filter: saturate(1%);
+    transition: filter 0.4s ease;
 }
 
 .project:hover {
@@ -89,9 +93,9 @@
         0 0 20px var(--gray-900);
 }
 
-/* .project:hover img {
-    filter: saturate(50%);
-} */
+.project:hover img {
+    filter: saturate(100%);
+}
 
 .project:hover .projectTitle,
 .project:hover .links {
@@ -103,8 +107,7 @@
     top: 1rem;
     right: 1rem;
     color: var(--gray-100);
-    font-weight: bold;
-    text-transform: capitalize;
+    text-transform: lowercase;
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 2;

@@ -1,11 +1,12 @@
 .nav {
     position: fixed;
     width: 100%;
+    height: var(--pad-3);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: var(--pad-1);
-    color: var(--gray-300);
+    color: var(--gray-200);
     mix-blend-mode: difference;
     z-index: 2000;
 }
@@ -22,7 +23,7 @@
 
 .logo a {
     text-decoration: none;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(0.8rem, 2vw, 1.4rem);
 }
 
 .logo a:hover {
@@ -79,6 +80,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    padding: var(--pad-3);
     background: var(--gray-900);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     display: flex;
