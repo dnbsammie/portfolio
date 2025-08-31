@@ -1,0 +1,60 @@
+.loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+}
+
+.block {
+    flex: 1;
+    background: var(--gray-800);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.intro_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: var(--gap-2);
+    overflow: hidden;
+}
+
+.word h3 {
+    transform: translateY(120%);
+    color: var(--gray-100);
+    width: 6ch;
+}
+
+#word_1 h3 {
+    transform: translateY(-120%);
+}
+
+.divider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: var(--gray-600);
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+
+.counter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.counter h6 {
+    color: var(--gray-300);
+}

@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 :root {
-  --gray-100: hsl(0, 0%, 94%);
-  --gray-200: hsl(0, 0%, 86%);
-  --gray-300: hsl(0, 0%, 74%);
-  --gray-400: hsl(0, 0%, 60%);
-  --gray-500: hsl(0, 0%, 48%);
-  --gray-600: hsl(0, 0%, 36%);
-  --gray-700: hsl(0, 0%, 24%);
-  --gray-800: hsl(0, 0%, 14%);
-  --gray-900: hsl(0, 0%, 6%);
+  --gray-100: hsl(0, 0%, 95%);
+  --gray-200: hsl(0, 0%, 82%);
+  --gray-300: hsl(0, 0%, 69%);
+  --gray-400: hsl(0, 0%, 56%);
+  --gray-500: hsl(0, 0%, 43%);
+  --gray-600: hsl(0, 0%, 30%);
+  --gray-700: hsl(0, 0%, 17%);
+  --gray-800: hsl(0, 0%, 5%);
   --pad-1: min(2%, 15px);
   --pad-2: min(4%, 30px);
   --pad-3: min(8%, 60px);
@@ -35,8 +34,8 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 300;
-  background: var(--gray-900);
-  color: var(--gray-700);
+  background: var(--gray-800);
+  color: var(--gray-600);
   cursor: none;
   overflow-x: hidden;
   height: -webkit-fill-available;
@@ -61,7 +60,7 @@ h4,
 h5,
 h6 {
   font-weight: 400;
-  color: var(--gray-900);
+  color: var(--gray-800);
 }
 
 h1 {
@@ -112,16 +111,10 @@ a {
   transition: all 0.2s ease-in-out;
 }
 
-a:hover {
-  color: var(--gray-900);
-  cursor: none;
-}
-
 /* === Elements === */
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   background: var(--gray-500);
 }
@@ -147,7 +140,7 @@ hr {
   top: 0;
   left: 0;
   border-radius: 50%;
-  background: var(--gray-100, white);
+  background: var(--gray-100);
   mix-blend-mode: difference;
   pointer-events: none;
   z-index: 9000;
@@ -160,10 +153,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.main-content {
-  background-color: var(--gray-900);
 }
 
 section {

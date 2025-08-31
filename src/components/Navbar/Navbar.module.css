@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: var(--pad-1);
-    color: var(--gray-200);
+    color: var(--gray-100);
     mix-blend-mode: difference;
     z-index: 2000;
 }
@@ -24,11 +24,6 @@
 .logo a {
     text-decoration: none;
     font-size: clamp(0.8rem, 2vw, 1.4rem);
-}
-
-.logo a:hover {
-    color: var(--gray-100);
-    transition: all .4s ease;
 }
 
 .toggle-btn {
@@ -69,10 +64,6 @@
     transform: translateY(-9px) rotate(-45deg);
 }
 
-.burger span:hover {
-    background: var(--gray-100);
-}
-
 /* === Menu Overlay === */
 .overlay {
     position: fixed;
@@ -81,7 +72,7 @@
     width: 100vw;
     height: 100vh;
     padding: var(--pad-3);
-    background: var(--gray-900);
+    background: var(--gray-800);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     display: flex;
     flex-direction: column;
@@ -112,7 +103,7 @@
     position: relative;
     text-align: center;
     text-transform: uppercase;
-    font-size: clamp(2rem, 6vw, 4rem);
+    font-size: clamp(3rem, 7vw, 5rem);
     line-height: 0.8;
     color: var(--gray-200);
     transition: letter-spacing 0.3s;
@@ -136,7 +127,7 @@
 }
 
 .menu-item a {
-    font-size: clamp(2rem, 6vw, 4rem);
+    font-size: clamp(3rem, 7vw, 5rem);
     text-decoration: none;
     color: var(--gray-100);
 }

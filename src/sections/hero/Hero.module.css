@@ -39,7 +39,7 @@
     height: 70vh;
     align-items: flex-start;
     justify-content: flex-start;
-    color: var(--gray-300);
+    color: var(--gray-200);
 }
 
 .right .split {
