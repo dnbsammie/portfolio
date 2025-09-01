@@ -18,7 +18,6 @@ const Hero = () => {
                         <a href="https://www.linkedin.com/in/seriveramosq" className="fa-brands fa-linkedin-in " target="_blank" aria-label="linkedin"></a>
                         <a href="https://github.com/dnbsammie" className="fa-brands fa-github " target="_blank" aria-label="github"></a>
                         <a href="https://codepen.io/dnbsammie" className="fa-brands fa-codepen " target="_blank" aria-label="codepen"></a>
-                        <a href="https://www.youtube.com/@dnbsammie" className="fa-brands fa-youtube " target="_blank" aria-label="youtube"></a>
                     </div>
                 </div>
             </div>

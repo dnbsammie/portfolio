@@ -23,7 +23,7 @@
 
 .logo a {
     text-decoration: none;
-    font-size: clamp(0.8rem, 2vw, 1.4rem);
+    font-size: clamp(1rem, 1.5vw, 1.75rem);
 }
 
 .toggle-btn {

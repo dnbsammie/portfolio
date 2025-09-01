@@ -64,7 +64,7 @@ h6 {
 }
 
 h1 {
-  font-size: clamp(3rem, 7vw, 5rem);
+  font-size: clamp(3rem, 7vw, 5.5rem);
   text-transform: uppercase;
   letter-spacing: clamp(0.75rem, 1.5vw, 1.75rem);
   line-height: 0.8;
@@ -100,6 +100,8 @@ small {
 
 .vertical_text {
   color: var(--gray-100);
+  letter-spacing: clamp(1.25rem, 2vw, 2rem);
+  ;
   mix-blend-mode: difference;
 }
 
@@ -120,7 +122,7 @@ img {
 }
 
 hr {
-  background-color: var(--gray-600);
+  background-color: var(--gray-700);
   border: none;
   width: 100%;
   max-width: var(--max-width);

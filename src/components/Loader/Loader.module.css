@@ -23,8 +23,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    gap: var(--gap-2);
     overflow: hidden;
+    gap: var(--gap-3);
 }
 
 .word h3 {
@@ -35,6 +35,11 @@
 
 #word_1 h3 {
     transform: translateY(-120%);
+    text-align: right;
+}
+
+#word_2 {
+    text-align: left;
 }
 
 .divider {

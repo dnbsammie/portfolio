@@ -19,7 +19,7 @@ export const Loader = ({ onComplete }: LoaderProps) => {
         if (count < 99) {
             interval = setInterval(() => {
                 setCount((prev) => (prev < 99 ? prev + 1 : prev));
-            }, 10);
+            }, 30);
         }
         return () => clearInterval(interval);
     }, [count]);
@@ -43,6 +43,13 @@ export const Loader = ({ onComplete }: LoaderProps) => {
                 scaleY: 1,
                 duration: 1,
                 transformOrigin: "top center",
+                onComplete: () => {
+                    gsap.to(`.${styles.divider}`, {
+                        opacity: 0,
+                        duration: 0.5,
+                        delay: 0.3,
+                    });
+                },
             });
 
             tl.to(`#word_1 h3`, { y: "100%", duration: 1, delay: 0.3 });
