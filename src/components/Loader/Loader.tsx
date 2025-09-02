@@ -37,7 +37,7 @@ export const Loader = ({ onComplete }: LoaderProps) => {
             });
 
             tl.to(`#word_1 h3`, { y: "0%", duration: 1 }, "<");
-            tl.to(`#word_2 h3`, { y: "0%", duration: 1 }, "<0.2");
+            tl.to(`#word_2 h3`, { y: "0%", duration: 1 }, "<0.3");
 
             tl.to(`.${styles.divider}`, {
                 scaleY: 1,
@@ -52,7 +52,7 @@ export const Loader = ({ onComplete }: LoaderProps) => {
                 },
             });
 
-            tl.to(`#word_1 h3`, { y: "100%", duration: 1, delay: 0.3 });
+            tl.to(`#word_1 h3`, { y: "100%", duration: 1, delay: 0.2 });
             tl.to(`#word_2 h3`, { y: "-100%", duration: 1 }, "<");
 
             tl.fromTo(
@@ -89,10 +89,10 @@ export const Loader = ({ onComplete }: LoaderProps) => {
                 <div className={styles.block}></div>
 
                 <div className={styles.intro_logo}>
-                    <div className={styles.word} id="word_1">
+                    <div className={styles.word_1} id="word_1">
                         <h3>samuel</h3>
                     </div>
-                    <div className={styles.word} id="word_2">
+                    <div className={styles.word_2} id="word_2">
                         <h3>rivera</h3>
                     </div>
                 </div>

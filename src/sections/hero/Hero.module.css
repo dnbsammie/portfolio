@@ -4,8 +4,14 @@
     justify-content: space-between;
 }
 
+.hero a:hover {
+    transform: translateY(0.25rem);
+    color: var(--gray-800);
+}
+
 .left,
 .right {
+    height: 50vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -18,12 +24,10 @@
     text-align: center;
     height: 100%;
     width: 100%;
-    gap: var(--gap-2);
     max-width: var(--max-width);
 }
 
 .left {
-    height: 30vh;
     justify-content: flex-end;
     align-items: flex-end;
     background: var(--gray-100);
@@ -33,10 +37,10 @@
     text-align: center;
     align-items: center;
     justify-content: flex-end;
+    gap: var(--gap-1);
 }
 
 .right {
-    height: 70vh;
     align-items: flex-start;
     justify-content: flex-start;
     color: var(--gray-200);
@@ -54,7 +58,7 @@
     flex-direction: row;
     height: fit-content;
     width: fit-content;
-    gap: var(--gap-3);
+    gap: var(--gap-4);
     color: var(--gray-200);
 }
 
@@ -78,10 +82,6 @@
     .right {
         width: 50vw;
         height: 100vh;
-    }
-
-    .split {
-        gap: var(--gap-3);
     }
 
     .left .split {

@@ -1,4 +1,4 @@
-// import { Link } from 'react-scroll';
+import { Link } from 'react-scroll';
 import styles from "./Hero.module.css";
 
 const Hero = () => {
@@ -6,8 +6,9 @@ const Hero = () => {
         <section id="hero" aria-labelledby="hero-section" className={styles.hero}>
             <div className={styles.left}>
                 <div className={styles.split}>
-                    <h1>SAMUEL <br /> RIVERA</h1>
                     <h5>software developer</h5>
+                    <h1>SAMUEL<br />RIVERA</h1>
+                    <Link to="about" smooth={true} duration={400} className="scrol-down" aria-label="scroll down">scroll down</Link>
                 </div>
             </div>
             <div className={styles.right}>

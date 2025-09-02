@@ -27,20 +27,20 @@
     gap: var(--gap-3);
 }
 
-.word h3 {
-    transform: translateY(120%);
-    color: var(--gray-100);
-    width: 6ch;
-}
-
-#word_1 h3 {
+.word_1 h3 {
     transform: translateY(-120%);
     text-align: right;
+    width: 6ch;
+    color: var(--gray-100);
 }
 
-#word_2 {
+.word_2 h3 {
+    transform: translateY(120%);
     text-align: left;
+    width: 6ch;
+    color: var(--gray-100);
 }
+
 
 .divider {
     position: absolute;
