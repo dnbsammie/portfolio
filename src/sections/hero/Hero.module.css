@@ -68,6 +68,7 @@
 }
 
 .socials a:hover {
+    cursor: none;
     text-decoration: none;
     transform: scale(1.1);
     color: var(--gray-100);

@@ -6,7 +6,7 @@ import Cursor from "./components/Cursor/Cursor";
 import Hero from "./sections/hero/Hero";
 import About from "./sections/about/About";
 import Projects from "./sections/projects/Projects";
-// import Blog from "./sections/blog/Blog";
+// import Insights from "./sections/insights/Insights";
 import Contact from "./sections/contact/Contact";
 
 const App: React.FC = () => {
