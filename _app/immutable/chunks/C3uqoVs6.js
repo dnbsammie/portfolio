@@ -1,0 +1,1 @@
+import{ad as t,w as u,ae as o,a1 as l,u as a}from"./bOdU2Eq8.js";function c(n){o===null&&t(),l&&o.l!==null?s(o).m.push(n):u(()=>{const e=a(n);if(typeof e=="function")return e})}function i(n){o===null&&t(),c(()=>()=>a(n))}function s(n){var e=n.l;return e.u??={a:[],b:[],m:[]}}export{i as a,c as o};
