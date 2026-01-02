@@ -1,16 +1,14 @@
 <script lang="ts">
+	import { base } from '$app/paths';
+
 	export let error: App.Error;
 	export let status: number;
 
-	const fallbackMessages: Record<number, string> = {
-		404: 'Something went wrong'
-	};
-
-	$: message = error?.message?.trim() || fallbackMessages[status] || 'Error';
+	const message = error?.message?.trim() || 'This page does not exist';
 </script>
 
 <svelte:head>
-	<title>Error {status} | {message}</title>
+	<title>404 | {message}</title>
 	<meta name="robots" content="noindex, nofollow" />
 	<meta property="og:title" content={`${status} - ${message}`} />
 </svelte:head>
@@ -19,7 +17,7 @@
 	<section class="notfound" id="notfound">
 		<h1 id="title">{status ?? '404'}</h1>
 		<p id="description">{message}</p>
-		<a href="/" data-sveltekit-preload class="back_home">Go Home</a>
+		<a href="{base}/" data-sveltekit-preload class="back_home">Go Home</a>
 	</section>
 </main>
 
