@@ -1,0 +1,26 @@
+{
+    "notfound": {
+        "404": "The link failed. The design didn't.",
+        "default": "Something went wrong",
+        "title": "This page doesn't exist, but we can build something better.",
+        "paragrah": "Even poorly defined routes can teach you things.",
+        "return": "Return Home"
+    },
+    "nav": {
+        "follow": "Follow Me",
+        "sitemap": "Sitemap",
+        "index": "Index",
+        "work": "Work",
+        "core": "Core",
+        "stack": "Stack",
+        "insights": "Insights",
+        "contact": "Contact",
+        "copy": "All rights reseved"
+    },
+    "index": {},
+    "word": {},
+    "core": {},
+    "stack": {},
+    "insights": {},
+    "footer": {}
+}

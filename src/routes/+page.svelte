@@ -1,2 +1,21 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	// ── System ──
+	// ── Layout ──
+	import Footer from '../components/layout/Footer.svelte';
+	// ── Sections ──
+	import Index from '../components/sections/Index.svelte';
+	// import Work from '../components/sections/Work.svelte';
+	// import Core from '../components/sections/Core.svelte';
+	// import Stack from '../components/sections/Stack.svelte';
+	// import Insights from '../components/sections/Insights.svelte';
+	// ── Div's ──
+</script>
+
+<svelte:head>
+	<title>S. Rivera | Portfolio</title>
+</svelte:head>
+
+<main>
+	<Index />
+	<Footer />
+</main>

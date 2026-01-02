@@ -1,0 +1,26 @@
+{
+    "notfound": {
+        "404": "El enlace falló. El diseño no.",
+        "default": "Algo salio mal",
+        "title": "Esta página no existe, pero podemos construir algo mejor.",
+        "paragrah": "Incluso rutas mal definidas tambien enseñan cosas.",
+        "return": "Volver al inicio"
+    },
+    "nav": {
+        "follow": "Sigueme",
+        "sitemap": "Mapa del sitio",
+        "index": "Index",
+        "work": "Work",
+        "core": "Core",
+        "stack": "Stack",
+        "insights": "Insights",
+        "contact": "Contacto",
+        "copy": "Todos los derechos reservados."
+    },
+    "index": {},
+    "word": {},
+    "core": {},
+    "stack": {},
+    "insights": {},
+    "footer": {}
+}
