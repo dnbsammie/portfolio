@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Raleway+Dots&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Questrial&display=swap');
 
 :root {
     /* === Typography === */
-    --font-primary: "Raleway", sans-serif;
-    --font-accent: "Raleway Dots", sans-serif;
+    --font-primary: "Questrial", sans-serif;
     --font-code: "JetBrains Mono", monospace;
     /*  Font Size  */
-    --font-size-h1: clamp(1.382rem, 1.1rem + 2.5vw, 5.652rem);
-    --font-size-h2: clamp(1.295rem, 1.05rem + 2vw, 3.997rem);
-    --font-size-h3: clamp(1.214rem, 1rem + 1.6vw, 2.827rem);
-    --font-size-h4: clamp(1.138rem, 0.95rem + 1.2vw, 1.999rem);
-    --font-size-body: clamp(1.067rem, 1rem + 0.6vw, 1.414rem);
-    --font-size-small: clamp(0.618rem, 0.6rem + 0.3vw, 0.937rem);
+    --font-size-h1: clamp(1.125rem, 4.5rem + 1vw, 9rem);
+    --font-size-h2: clamp(1rem, 3.5rem + 1vw, 6rem);
+    --font-size-h3: clamp(0.875rem, 2.75rem + 1vw, 4.5rem);
+    --font-size-h4: clamp(0.75rem, 2rem + 1vw, 3rem);
+    --font-size-h5: clamp(0.625rem, 1.5rem + 1vw, 2rem);
+    --font-size-body: clamp(0.75rem, 1rem + 1vw, 1.125rem);
+    --font-size-small: clamp(0.5rem, 0.625rem + 1vw, 0.75rem);
     /* === Colors === */
     /* Gray */
     --gray-50: hsl(11, 5%, 98%);
@@ -27,12 +27,12 @@
     --gray-950: hsl(11, 5%, 2%);
     /* Ember */
     --ember-50: hsl(7, 100%, 95%);
-    --ember-100: hsl(6, 90%, 90%);
-    --ember-200: hsl(6, 80%, 80%);
-    --ember-300: hsl(5, 70%, 70%);
-    --ember-400: hsl(5, 60%, 60%);
-    --ember-500: hsl(4, 50%, 50%);
-    --ember-600: hsl(4, 60%, 40%);
+    --ember-100: hsl(6, 100%, 90%);
+    --ember-200: hsl(6, 90%, 80%);
+    --ember-300: hsl(5, 90%, 70%);
+    --ember-400: hsl(5, 80%, 60%);
+    --ember-500: hsl(4, 80%, 50%);
+    --ember-600: hsl(4, 70%, 40%);
     --ember-700: hsl(3, 70%, 30%);
     --ember-800: hsl(3, 80%, 20%);
     --ember-900: hsl(2, 90%, 10%);

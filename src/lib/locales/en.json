@@ -1,26 +1,97 @@
 {
-    "notfound": {
-        "404": "The link failed. The design didn't.",
-        "default": "Something went wrong",
-        "title": "This page doesn't exist, but we can build something better.",
-        "paragrah": "Even poorly defined routes can teach you things.",
-        "return": "Return Home"
-    },
     "nav": {
-        "follow": "Follow Me",
+        "follow": "Follow",
         "sitemap": "Sitemap",
-        "index": "Index",
+        "language": "Language",
+        "home": "Index",
         "work": "Work",
         "core": "Core",
         "stack": "Stack",
         "insights": "Insights",
         "contact": "Contact",
-        "copy": "All rights reseved"
+        "emailLabel": "Send an email",
+        "copy": "All rights reserved."
     },
-    "index": {},
-    "word": {},
-    "core": {},
-    "stack": {},
-    "insights": {},
-    "footer": {}
+    "home": {
+        "role": "Web developer and design enthusiast",
+        "profile": "Profile",
+        "intro": "I build clear and functional interfaces. I connect design and development to create web products with intention, detail, and solid user experience.",
+        "skills": {
+            "1": "Frontend with a visual focus",
+            "2": "UI integration and smooth user experience",
+            "3": "Scalable backend architecture and logic",
+            "4": "User-centered prototyping and design"
+        },
+        "availability": "Currently available",
+        "scroll": "Projects"
+    },
+    "work": {
+        "title": "Work",
+        "modal": {
+            "summary": "Project overview",
+            "problem": "Problem",
+            "solution": "Solution",
+            "challenge": "Technical challenge",
+            "results": "Results",
+            "technologies": "Technologies",
+            "role": "Role",
+            "metrics": "Metrics",
+            "learnings": "Learnings"
+        },
+        "radial": {
+            "architecture": "Architecture",
+            "ui": "UI / UX",
+            "performance": "Performance",
+            "security": "Security",
+            "testing": "Testing"
+        }
+    },
+    "core": {
+        "title": "Core",
+        "statement": {
+            "phrase1": "I build so the web",
+            "phrase2": "feels fluid, human, and aesthetic.",
+            "phrase3": "Design guides the idea,",
+            "phrase4": "code makes it real."
+        }
+    },
+    "stack": {
+        "title": "Stack",
+        "intro": "I work with modern technologies to turn ideas into functional products. Choosing the right tools creates order; iteration makes them better.",
+        "frontend": {
+            "title": "Frontend",
+            "description": "Reactive UIs with TypeScript. React, Svelte, and Angular for dynamic interfaces. Vite for fast environments. Three.js, Motion, and GSAP for interactive experiences."
+        },
+        "backend": {
+            "title": "Backend",
+            "description": "Solid API development with Java and Spring Boot, focused on modular architecture, security, and scalability."
+        },
+        "data": {
+            "title": "Data & DevOps",
+            "description": "MongoDB, PostgreSQL, and MySQL depending on project needs. Version control with Git and deployments using Docker."
+        },
+        "design": {
+            "title": "Design",
+            "description": "I use Figma for prototyping, design systems, and defining consistent user flows."
+        }
+    },
+    "insights": {
+        "blog": {
+            "title": "Insights",
+            "latest": "Latest posts",
+            "toggleView": "Toggle view"
+        }
+    },
+    "notFound": {
+        "default": "Something went wrong",
+        "title": "The link failed. The design didn’t.",
+        "description": "Even poorly defined routes can teach us something.",
+        "return": "Back to home"
+    },
+    "footer": {
+        "title": "Let’s build something amazing together",
+        "paragraph": "I’m open to collab, and build ideas where technical detail and design vision truly matter.",
+        "back": "Back to top",
+        "copyright": "All rights reserved."
+    }
 }

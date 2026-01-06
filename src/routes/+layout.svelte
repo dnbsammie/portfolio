@@ -1,13 +1,12 @@
 <script lang="ts">
-	// ── Icons ──
+	// ─── Lib ───
 	import { favicon } from '$lib';
-	// ── Lang ──
-	// ── Styles ──
+	// ── Styles ───
 	import '../styles/animations.css';
 	import '../styles/global.css';
 	import '../styles/mixins.css';
 	import '../styles/variables.css';
-	// ── Page ──
+	// ─── Page ───
 	let { children } = $props();
 </script>
 

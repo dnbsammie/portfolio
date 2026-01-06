@@ -1,26 +1,97 @@
 {
-    "notfound": {
-        "404": "El enlace falló. El diseño no.",
-        "default": "Algo salio mal",
-        "title": "Esta página no existe, pero podemos construir algo mejor.",
-        "paragrah": "Incluso rutas mal definidas tambien enseñan cosas.",
-        "return": "Volver al inicio"
-    },
     "nav": {
         "follow": "Sigueme",
         "sitemap": "Mapa del sitio",
-        "index": "Index",
+        "language": "Idioma",
+        "home": "Index",
         "work": "Work",
         "core": "Core",
         "stack": "Stack",
         "insights": "Insights",
         "contact": "Contacto",
+        "emailLabel": "Envia un email",
         "copy": "Todos los derechos reservados."
     },
-    "index": {},
-    "word": {},
-    "core": {},
-    "stack": {},
-    "insights": {},
-    "footer": {}
+    "home": {
+        "role": "Desarrollador web y entusiasta del diseño",
+        "profile": "Perfil",
+        "intro": "Construyo interfaces claras y funcionales. Conecto diseño y desarrollo para crear productos web con intención, detalle y buena experiencia de usuario.",
+        "skills": {
+            "1": "Frontend con enfoque visual",
+            "2": "Integración UI y experiencia fluida",
+            "3": "Arquitectura y lógica backend escalable",
+            "4": "Prototipado y diseño centrado en usabilidad"
+        },
+        "availability": "Actualmente disponible",
+        "scroll": "Proyectos"
+    },
+    "work": {
+        "title": "Proyectos",
+        "modal": {
+            "summary": "Resumen del proyecto",
+            "problem": "Problema",
+            "solution": "Solución",
+            "challenge": "Desafío técnico",
+            "results": "Resultados",
+            "technologies": "Tecnologías",
+            "role": "Rol",
+            "metrics": "Métricas",
+            "learnings": "Aprendizajes"
+        },
+        "radial": {
+            "architecture": "arquitectura",
+            "ui": "UI / UX",
+            "performance": "Rendimiento",
+            "security": "Seguridad",
+            "testing": "Testing"
+        }
+    },
+    "core": {
+        "title": "Mi desarrollo",
+        "statement": {
+            "phrase1": "Construyo para que la web",
+            "phrase2": "Se sienta fluida, humana y estética.",
+            "phrase3": "El diseño guía la idea",
+            "phrase4": "El código la hace real"
+        }
+    },
+    "stack": {
+        "title": "Stack",
+        "intro": "Trabajo con tecnologías modernas para transformar ideas en productos funcionales. Elegir bien las herramientas construye orden; iterar las vuelve mejores.",
+        "frontend": {
+            "title": "Frontend",
+            "description": "UI reactivas con Typescript. React, Svelte y Angular para interfaces dinámicas. Vite para entornos rápidos. Three.js, Motion y GSAP para experiencias con movimiento."
+        },
+        "backend": {
+            "title": "Backend",
+            "description": "Desarrollo de APIs sólidas con Java y Spring Boot, enfocadas en arquitectura modular, seguridad y escalabilidad."
+        },
+        "data": {
+            "title": "Datos y DevOps",
+            "description": "MongoDB, PostgreSQL y MySQL según la necesidad del proyecto. Control de versiones con Git y despliegues con Docker."
+        },
+        "design": {
+            "title": "Diseño",
+            "description": "Uso Figma para prototipos, sistemas visuales y definición de flujos consistentes."
+        }
+    },
+    "insights": {
+        "blog": {
+            "title": "Blog",
+            "latest": "Últimas publicaciones",
+            "toggleView": "Cambiar vista"
+        }
+    },
+    "notFound": {
+        "default": "Algo salio mal",
+        "title": "El enlace falló. El diseño no.",
+        "description": "Incluso rutas mal definidas tambien enseñan cosas.",
+        "return": "Volver al inicio"
+    },
+    "footer": {
+        "title": "Construyamos algo increible juntos",
+        "paragraph": "Estoy abierto a colaborar, construir ideas y desarrollar proyectos donde el detalle técnico y la visión de diseño sean importantes.",
+        "back": "Volver al inicio",
+        "copyright": "Todos los derechos reservados."
+    }
 }

@@ -30,3 +30,5 @@ yarn-debug.log*
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+audio/
