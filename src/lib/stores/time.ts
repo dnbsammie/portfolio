@@ -1,5 +1,7 @@
 import { writable } from 'svelte/store';
 
+export const currentYear = new Date().getFullYear();
+
 export function createLocalTimeStore(locale = 'es-CO', timeZone = 'America/Bogota') {
     const localTime = writable('');
 

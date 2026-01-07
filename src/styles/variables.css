@@ -5,13 +5,13 @@
     --font-primary: "Questrial", sans-serif;
     --font-code: "JetBrains Mono", monospace;
     /*  Font Size  */
-    --font-size-h1: clamp(1.125rem, 4.5rem + 1vw, 9rem);
-    --font-size-h2: clamp(1rem, 3.5rem + 1vw, 6rem);
-    --font-size-h3: clamp(0.875rem, 2.75rem + 1vw, 4.5rem);
-    --font-size-h4: clamp(0.75rem, 2rem + 1vw, 3rem);
-    --font-size-h5: clamp(0.625rem, 1.5rem + 1vw, 2rem);
-    --font-size-body: clamp(0.75rem, 1rem + 1vw, 1.125rem);
-    --font-size-small: clamp(0.5rem, 0.625rem + 1vw, 0.75rem);
+    --font-size-h1: clamp(2.250rem, 2.875rem + 1vw, 3.5rem);
+    --font-size-h2: 2.125rem;
+    --font-size-h3: 1.75rem;
+    --font-size-h4: 1.5rem;
+    --font-size-h5: 1.125rem;
+    --font-size-body: 1rem;
+    --font-size-small: 0.625rem;
     /* === Colors === */
     /* Gray */
     --gray-50: hsl(11, 5%, 98%);
@@ -53,4 +53,28 @@
     --max-width-lg: 1200px;
     --max-width-xl: 1440px;
     --max-width-xxl: 1920px;
+}
+
+@media (min-width:960px) {
+    :root {
+        --font-size-h1: 8rem;
+        --font-size-h2: 4.5rem;
+        --font-size-h3: 3.5rem;
+        --font-size-h4: 2.25rem;
+        --font-size-h5: 1.375rem;
+        --font-size-body: 1rem;
+        --font-size-small: 0.875rem;
+    }
+}
+
+@media (min-width:1440px) {
+    :root {
+        --font-size-h1: clamp(6.75rem, 8.875rem + 1.5vw, 12rem);
+        /* --font-size-h2: clamp(6rem, 8rem, 10rem); */
+        /* --font-size-h3: clamp(5rem, 7rem, 9rem); */
+        /* --font-size-h4: clamp(3rem, 4rem, 9rem); */
+        /* --font-size-h5: clamp(2rem, 3rem, 9rem); */
+        /* --font-size-body: clamp(1rem, 1.5rem, 9rem); */
+        /* --font-size-small: clamp(0.5625rem, 1rem, 9rem); */
+    }
 }

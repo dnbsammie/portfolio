@@ -1,12 +1,20 @@
 <script lang="ts">
+	import { onDestroy } from 'svelte';
 	// ─── Lib ───
-	import { favicon } from '$lib';
+	import { favicon, isMenuOpen } from '$lib';
 	// ── Styles ───
 	import '../styles/animations.css';
 	import '../styles/global.css';
 	import '../styles/mixins.css';
 	import '../styles/variables.css';
 	// ─── Page ───
+	let unsubscribe = isMenuOpen.subscribe((open) => {
+		document.documentElement.classList.toggle('menu-open', open);
+		document.body.style.overflow = open ? 'hidden' : '';
+	});
+
+	onDestroy(unsubscribe);
+
 	let { children } = $props();
 </script>
 

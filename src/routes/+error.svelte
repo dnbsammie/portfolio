@@ -19,7 +19,7 @@
 	<Background />
 	<section class="notfound" id="notfound">
 		<div class="error_title">
-			<h1 id="error_text">{status ?? '404'}</h1>
+			<h1 id="outline_text">{status ?? '404'}</h1>
 		</div>
 		<div class="error_bottom">
 			<div class="error_l">
@@ -81,16 +81,5 @@
 
 	.error_r {
 		align-items: flex-end;
-	}
-
-	@supports (-webkit-text-stroke: 1px var(--gray-100)) {
-		#error_text {
-			font-family: var(--font-code), monospace;
-			font-size: clamp(6rem, 9rem + 3vw, 12rem);
-			color: currentColor;
-			-webkit-text-fill-color: transparent;
-			-webkit-text-stroke-width: 1px;
-			-webkit-text-stroke-color: var(--gray-100);
-		}
 	}
 </style>

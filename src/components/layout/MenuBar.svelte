@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { favicon, menuOpen, menuAnimating } from '$lib';
+	import { favicon } from '$lib';
 	import { base } from '$app/paths';
 	import AudioPlayer from '../system/AudioPlayer.svelte';
 	import MenuToggle from '../ui/MenuToggle.svelte';
@@ -7,7 +7,9 @@
 
 <div class="menu-bar">
 	<div class="logo">
-		<a href="{base}/"><img src={favicon} alt="" /></a>
+		<a href="{base}/">
+			<img src={favicon} alt="logo" />
+		</a>
 	</div>
 	<div class="audio">
 		<AudioPlayer />
@@ -27,19 +29,18 @@
 		top: 0;
 		left: 0;
 		right: 0;
-		height: fit-content;
 		width: 100%;
+		height: 3.125rem;
 		padding: var(--space-xs);
 		color: var(--gray-300);
 		mix-blend-mode: difference;
-		z-index: 9999;
+		z-index: 5000;
 	}
 
 	.menu-bar > div {
 		flex: 1;
 		display: flex;
 		align-items: center;
-		height: 20px;
 	}
 
 	.menu-bar a:active {
@@ -67,12 +68,6 @@
 	@media (hover: hover) and (pointer: fine) {
 		.menu-bar a:hover {
 			color: var(--gray-50);
-		}
-	}
-
-	@media (min-width: 768px) {
-		.menu-bar {
-			padding: var(--space-xs) var(--space-sm);
 		}
 	}
 </style>

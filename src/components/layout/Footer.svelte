@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { scrollIntoView, t, favicon } from '$lib';
+	import { scrollIntoView, currentYear, t } from '$lib';
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import SmartLink from '../ui/SmartLink.svelte';
@@ -45,8 +45,6 @@
 			lenis.destroy();
 		};
 	});
-
-	const currentYear = new Date().getFullYear();
 </script>
 
 <footer class="contact" id="contact" aria-labelledby="footer" bind:this={footer}>
@@ -69,14 +67,10 @@
 				<div class="f_col" id="media">
 					<div class="f_sub_col" id="social">
 						<h6>{$t('nav.follow')}</h6>
-						<ul>
-							<a href="https://codepen.io/dnbsammie" target="_blank">Codepen</a>
-							<a href="https://colorswall.com/users/3710" target="_blank">ColorsWall</a>
-							<a href="https://github.com/dnbsammie" target="_blank">Github</a>
-
-							<a href="https://www.linkedin.com/in/seriveramosq/" target="_blank">LinkedIn </a>
-						</ul>
-
+						<a href="https://codepen.io/dnbsammie" target="_blank">Codepen</a>
+						<a href="https://colorswall.com/users/3710" target="_blank">ColorsWall</a>
+						<a href="https://github.com/dnbsammie" target="_blank">Github</a>
+						<a href="https://www.linkedin.com/in/seriveramosq/" target="_blank">LinkedIn </a>
 						<h6>{$t('nav.language')}</h6>
 						<LangSwitcher />
 					</div>
@@ -187,6 +181,7 @@
 
 	#paragraph p {
 		width: 100%;
+		max-width: 65ch;
 	}
 
 	#media {

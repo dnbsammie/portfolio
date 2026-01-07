@@ -1,8 +1,17 @@
 <script lang="ts">
+	import { isMenuOpen, toggleMenu } from '$lib/stores/menu';
 </script>
 
-<button class="burger" aria-label="menu hamburger icon">
-	<span></span><span></span><span></span>
+<button
+	class="burger"
+	class:active={$isMenuOpen}
+	aria-label="menu hamburger icon"
+	aria-pressed={$isMenuOpen}
+	on:click={toggleMenu}
+>
+	<span></span>
+	<span></span>
+	<span></span>
 </button>
 
 <style>

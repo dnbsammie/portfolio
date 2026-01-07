@@ -19,7 +19,7 @@
 	<div class="hero_container">
 		<div class="hero_info">
 			<h6>{$t('home.profile')}</h6>
-			<small>{$t('home.intro')}</small>
+			<p>{$t('home.intro')}</p>
 			<div class="hero_cta">
 				<SmartLink
 					href="mailto:seriveramosq@gmail.com"
@@ -40,7 +40,6 @@
 			<small>{$t('home.skills.2')}</small>
 			<small>{$t('home.skills.3')}</small>
 			<small>{$t('home.skills.4')}</small>
-			<small>{$t('home.skills.5')}</small>
 		</div>
 		<div class="hero_data">
 			<small>{$t('home.availability')}</small>
@@ -54,13 +53,13 @@
 
 <style>
 	#index {
-		height: 100vh;
+		height: 100svh;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
 		align-items: center;
-		gap: var(--space-xxs);
-		padding: 0 var(--space-xxs) var(--space-xxs);
+		gap: var(--space-xs);
+		padding: 0 var(--space-xs) var(--space-sm);
 	}
 
 	.hero_container,
@@ -74,19 +73,21 @@
 	}
 
 	.hero_container {
-		max-height: 60vh;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(2, 1fr);
-		grid-column-gap: var(--space-xxs);
-		grid-row-gap: var(--space-xxs);
+		grid-column-gap: var(--space-sm);
+		grid-row-gap: var(--space-sm);
 	}
 
 	.hero_container > div {
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
-		height: fit-content;
+		justify-content: flex-start;
+		align-items: flex-start;
+		min-height: 125px;
+		height: 100%;
+		width: 100%;
 		gap: var(--space-xxs);
 	}
 
@@ -95,9 +96,11 @@
 	}
 
 	.hero_cta {
-		display: flex;
-		justify-content: space-between;
-		gap: var(--space-xs);
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: var(--space-sm);
 	}
 	.hero_skills {
 		grid-area: 2 / 1 / 3 / 2;
@@ -108,23 +111,21 @@
 
 	@media (min-width: 768px) {
 		#index {
-			padding: 0 var(--space-sm) var(--space-sm);
-			gap: var(--space-sm);
+			gap: var(--space-md);
 		}
 
 		.hero_container {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-rows: 1fr;
-			grid-column-gap: var(--space-xs);
-			grid-row-gap: var(--space-xs);
-		}
-		.hero_info {
-			grid-area: 1 / 1 / 2 / 3;
+			grid-column-gap: var(--space-md);
 		}
 
-		.hero_cta {
-			justify-content: flex-start;
-			gap: var(--space-sm);
+		.hero_container > div {
+			justify-content: space-between;
+		}
+
+		.hero_info {
+			grid-area: 1 / 1 / 2 / 3;
 		}
 
 		.hero_skills {
@@ -136,7 +137,7 @@
 		}
 	}
 
-	@media (min-width: 1280px) {
+	@media (min-width: 1080px) {
 		.hero_container,
 		.hero_top {
 			display: grid;
@@ -161,7 +162,7 @@
 		}
 	}
 
-	@media (min-width: 1600px) {
+	@media (min-width: 1440px) {
 		.hero_container,
 		.hero_top {
 			display: grid;
@@ -169,7 +170,7 @@
 		}
 
 		.hero_title {
-			grid-area: 1 / 2 / 2 / 6;
+			grid-area: 1 / 2 / 2 / 7;
 		}
 
 		.hero_info {
