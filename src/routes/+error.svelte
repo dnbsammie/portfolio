@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { t } from '$lib';
+	import SmartLink from '../components/ui/SmartLink.svelte';
 	import Background from '../components/layout/Background.svelte';
 	import Footer from '../components/layout/Footer.svelte';
 	export let error: App.Error;
@@ -23,14 +24,16 @@
 		</div>
 		<div class="error_bottom">
 			<div class="error_l">
-				<h4>
-					{@html $t('notFound.title').replace(/\r?\n\r?\n/g, '<br /><br />')}
-				</h4>
-
+				<h4>{$t('notFound.title')}</h4>
 				<p id="description">{$t('notFound.description')}</p>
 			</div>
 			<div class="error_r">
-				<a href="{base}/" data-sveltekit-preload class="back_home">{$t('notFound.return')}</a>
+				<SmartLink
+					href="{base}/"
+					label={$t('notFound.return')}
+					ariaLabel={$t('notFound.return')}
+					icon="fa-solid fa-chevron-right"
+				/>
 			</div>
 		</div>
 	</section>
@@ -68,7 +71,11 @@
 	}
 
 	.error_bottom h4 {
-		max-width: 15ch;
+		width: 13ch;
+	}
+
+	.error_bottom p {
+		max-width: 30ch;
 	}
 
 	.error_l,

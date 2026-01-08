@@ -27,9 +27,6 @@
 
 <section class="work" id="work" aria-labelledby="work-section" bind:this={sectionRef}>
 	<div class="sticky">
-		<div class="track">
-			<hr />
-		</div>
 		<div class="projects" bind:this={scrollRef}>
 			{#each [img1, img2, img3, img4, img5] as img, i}
 				<div class="project">
@@ -47,7 +44,7 @@
 </section>
 
 <style>
-	.work {
+	#work {
 		height: 500vh;
 		padding: 0;
 		background: transparent;
@@ -60,18 +57,6 @@
 		overflow: hidden;
 		background: transparent;
 		z-index: 2;
-	}
-
-	.track {
-		display: flex;
-		align-items: flex-end;
-		justify-content: flex-end;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		inset: 0;
-		z-index: 0;
-		padding: var(--space-xs) 0;
 	}
 
 	.projects {

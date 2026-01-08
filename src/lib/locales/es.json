@@ -47,12 +47,12 @@
         }
     },
     "core": {
-        "title": "Mi desarrollo",
+        "title": "Core",
         "statement": {
-            "phrase1": "Construyo para que la web",
-            "phrase2": "Se sienta fluida, humana y estética.",
-            "phrase3": "El diseño guía la idea",
-            "phrase4": "El código la hace real"
+            "1": "Construyo para que la web",
+            "2": "Se sienta fluida, humana y estética.",
+            "3": "El diseño guía la idea",
+            "4": "El código la hace real"
         }
     },
     "stack": {
@@ -76,11 +76,10 @@
         }
     },
     "insights": {
-        "blog": {
-            "title": "Blog",
-            "latest": "Últimas publicaciones",
-            "toggleView": "Cambiar vista"
-        }
+        "title": "Blog",
+        "latest": "Últimas publicaciones",
+        "toggleView": "Cambiar vista",
+        "bottom":"Sígueme para más"
     },
     "notFound": {
         "default": "Algo salio mal",

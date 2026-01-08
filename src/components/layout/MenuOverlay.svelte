@@ -6,18 +6,18 @@
 </script>
 
 {#if $isMenuOpen}
-	<div class="menu_overlay">
+	<menu class="menu_overlay">
+		<div class="menu_title">
+			<span id="outline_text">S</span>
+			<span id="outline_text">.</span>
+			<span id="outline_text">R</span>
+			<span id="outline_text">I</span>
+			<span id="outline_text">V</span>
+			<span id="outline_text">E</span>
+			<span id="outline_text">R</span>
+			<span id="outline_text">A</span>
+		</div>
 		<div class="menu_overlay_content">
-			<div class="menu_title">
-				<span id="outline_text">S</span>
-				<span id="outline_text">.</span>
-				<span id="outline_text">R</span>
-				<span id="outline_text">I</span>
-				<span id="outline_text">V</span>
-				<span id="outline_text">E</span>
-				<span id="outline_text">R</span>
-				<span id="outline_text">A</span>
-			</div>
 			<div class="menu_main">
 				<div class="menu_link_wrapper">
 					<h6>{$t('nav.sitemap')}</h6>
@@ -86,7 +86,7 @@
 				>&copy; {currentYear} Samuel Rivera. {$t('footer.copyright')}</small
 			>
 		</div>
-	</div>
+	</menu>
 {/if}
 
 <style>
@@ -148,9 +148,12 @@
 	}
 
 	.menu_title {
+		position: absolute;
 		flex-direction: row;
 		align-items: flex-end;
 		width: 100%;
+		padding: var(--space-xs);
+		z-index: -1;
 	}
 
 	/* Sub Containers */

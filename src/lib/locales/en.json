@@ -49,10 +49,10 @@
     "core": {
         "title": "Core",
         "statement": {
-            "phrase1": "I build so the web",
-            "phrase2": "feels fluid, human, and aesthetic.",
-            "phrase3": "Design guides the idea,",
-            "phrase4": "code makes it real."
+            "1": "I build so the web",
+            "2": "feels fluid, human, and aesthetic.",
+            "3": "Design guides the idea,",
+            "4": "code makes it real."
         }
     },
     "stack": {
@@ -76,11 +76,15 @@
         }
     },
     "insights": {
-        "blog": {
-            "title": "Insights",
-            "latest": "Latest posts",
-            "toggleView": "Toggle view"
-        }
+        "title": "Insights",
+        "latest": "Latest posts",
+        "toggleView": "Toggle view",
+        "post": {
+            "01": "hola",
+            "02": "este",
+            "03": "es"
+        },
+        "bottom":"Follow Me For More"
     },
     "notFound": {
         "default": "Something went wrong",

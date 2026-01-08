@@ -71,8 +71,6 @@
 						<a href="https://colorswall.com/users/3710" target="_blank">ColorsWall</a>
 						<a href="https://github.com/dnbsammie" target="_blank">Github</a>
 						<a href="https://www.linkedin.com/in/seriveramosq/" target="_blank">LinkedIn </a>
-						<h6>{$t('nav.language')}</h6>
-						<LangSwitcher />
 					</div>
 					<div class="f_sub_col" id="sitemap">
 						<h6>{$t('nav.sitemap')}</h6>
@@ -88,7 +86,7 @@
 				<small class="copyright" aria-label="copyright"
 					>&copy; {currentYear} Samuel Rivera. {$t('footer.copyright')}</small
 				>
-				<a href="{base}/404" class="fallback">404</a>
+				<LangSwitcher />
 			</div>
 		</div>
 	</div>

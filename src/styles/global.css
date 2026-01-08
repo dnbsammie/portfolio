@@ -103,6 +103,58 @@ button {
     cursor: pointer
 }
 
+.icn_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    border: none;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    margin-right: var(--space-xxs);
+}
+
+.txt_bx,
+.icn_bx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px var(--gray-100);
+    border-radius: 9999px;
+    height: 2.25rem;
+    color: var(--gray-100);
+    background-color: transparent;
+    font-size: var(--font-size-small);
+    font-family: var(--font-primary), sans-serif;
+    font-style: normal;
+    transition: all 0.3s ease-in-out;
+}
+
+.txt_bx {
+    font-weight: 400;
+    min-width: 7rem;
+    padding: var(--space-xxs) var(--space-xs);
+}
+
+.icn_bx {
+    font-weight: 100;
+    aspect-ratio: 1/1;
+    height: 2.25rem;
+    width: 2.25rem;
+    margin-left: var(--space-xxs);
+}
+
+.icn_btn:active .icn_bx,
+.icn_btn:active .txt_bx {
+    border: solid 1px var(--ember-300);
+    background-color: var(--ember-300);
+    color: var(--gray-950);
+}
+
+.icn_btn:active .icn_bx {
+    transform: translateX(5px) rotate(-45deg);
+}
 
 /* === Elements === */
 img {
@@ -153,6 +205,28 @@ section {
     z-index: 1;
 }
 
+.container {
+    flex: 1;
+    max-width: var(--max-width-xxl);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-xs);
+}
+
+.sticky_sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20px;
+    height: 100%;
+}
+
+.sticky_text {
+    top: 50px;
+    position: sticky;
+    writing-mode: vertical-lr;
+}
+
 @supports (-webkit-text-stroke: 1px var(--gray-100)) {
     #outline_text {
         font-family: var(--font-primary), monospace;
@@ -173,5 +247,20 @@ section {
 
     button:hover {
         cursor: pointer
+    }
+
+    .icn_btn:hover {
+        cursor: pointer;
+    }
+
+    .icn_btn:hover .icn_bx,
+    .icn_btn:hover .txt_bx {
+        border: solid 1px var(--ember-300);
+        background-color: var(--ember-300);
+        color: var(--gray-950);
+    }
+
+    .icn_btn:hover .icn_bx {
+        transform: translateX(5px) rotate(-45deg);
     }
 }

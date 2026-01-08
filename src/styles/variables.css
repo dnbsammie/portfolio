@@ -26,17 +26,17 @@
     --gray-900: hsl(11, 5%, 10%);
     --gray-950: hsl(11, 5%, 2%);
     /* Ember */
-    --ember-50: hsl(7, 100%, 95%);
-    --ember-100: hsl(6, 100%, 90%);
-    --ember-200: hsl(6, 90%, 80%);
-    --ember-300: hsl(5, 90%, 70%);
-    --ember-400: hsl(5, 80%, 60%);
-    --ember-500: hsl(4, 80%, 50%);
-    --ember-600: hsl(4, 70%, 40%);
-    --ember-700: hsl(3, 70%, 30%);
-    --ember-800: hsl(3, 80%, 20%);
-    --ember-900: hsl(2, 90%, 10%);
-    --ember-950: hsl(2, 100%, 5%);
+    --ember-50: hsl(12, 100%, 95%);
+    --ember-100: hsl(11, 100%, 90%);
+    --ember-200: hsl(11, 100%, 80%);
+    --ember-300: hsl(11, 100%, 70%);
+    --ember-400: hsl(11, 100%, 60%);
+    --ember-500: hsl(11, 100%, 50%);
+    --ember-600: hsl(11, 100%, 40%);
+    --ember-700: hsl(11, 100%, 30%);
+    --ember-800: hsl(11, 100%, 20%);
+    --ember-900: hsl(11, 100%, 10%);
+    --ember-950: hsl(11, 100%, 5%);
     /* === Spacing === */
     --space-xxs: clamp(0.25rem, 0.25rem + 0.2vw, 0.5rem);
     --space-xs: clamp(0.5rem, 0.5rem + 0.5vw, 1rem);
@@ -70,7 +70,7 @@
 @media (min-width:1440px) {
     :root {
         --font-size-h1: clamp(6.75rem, 8.875rem + 1.5vw, 12rem);
-        /* --font-size-h2: clamp(6rem, 8rem, 10rem); */
+        --font-size-h2: clamp(5rem, 7rem, 9rem);
         /* --font-size-h3: clamp(5rem, 7rem, 9rem); */
         /* --font-size-h4: clamp(3rem, 4rem, 9rem); */
         /* --font-size-h5: clamp(2rem, 3rem, 9rem); */
