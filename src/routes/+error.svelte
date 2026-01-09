@@ -33,6 +33,7 @@
 					label={$t('notFound.return')}
 					ariaLabel={$t('notFound.return')}
 					icon="fa-solid fa-chevron-right"
+					tone="light"
 				/>
 			</div>
 		</div>
@@ -48,6 +49,7 @@
 		justify-content: flex-end;
 		align-items: center;
 		background: transparent;
+		color: var(--gray-200);
 	}
 
 	.error_title {
@@ -72,6 +74,7 @@
 
 	.error_bottom h4 {
 		width: 13ch;
+		color: var(--gray-50);
 	}
 
 	.error_bottom p {

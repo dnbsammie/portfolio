@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { t, img1, img2, img3, img4, img5 } from '$lib';
 	import SmartButton from '../ui/SmartButton.svelte';
+	import gsap from 'gsap';
+	import { CustomEase } from 'gsap/CustomEase';
 
 	let isTwoColumns = false;
 
@@ -13,17 +15,18 @@
 	<div class="i_top">
 		<h2>{$t('insights.title')}</h2>
 		<SmartButton
-			label={$t('insights.toggleView')}
-			ariaLabel={$t('insights.toggleView')}
-			icon="fa-solid fa-arrows-rotate"
-			on:click={toggleDirection}
+				label={$t('insights.toggleView')}
+				ariaLabel={$t('insights.toggleView')}
+				icon="fa-solid fa-arrows-rotate"
+				on:click={toggleDirection}
+				tone="light"
 		/>
 	</div>
 	<div
-		class="i_grid"
-		class:twoCols={isTwoColumns}
+			class="i_grid"
+			class:twoCols={isTwoColumns}
 	>
-		{#each [img1, img2, img3, img4, img5, img1] as img, i}
+		{#each [img1, img2, img3, img4, img5] as img, i}
 			<div class="post" class:row={isTwoColumns}>
 				<div class="post_img" class:row={isTwoColumns}>
 					<img src={img} alt=""/>
@@ -50,40 +53,26 @@
 
 <style>
 	#insights {
+		height: 128svh;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 		align-items: center;
-		justify-content: flex-start;
-		height: 128svh;
 		gap: var(--space-xs);
-		padding: calc(var(--space-xs) + 50px) var(--space-xs) var(--space-xs);
-		background: var(--gray-950);
-		background: -webkit-linear-gradient(
-			180deg,
-			var(--gray-950) 0%,
-			var(--gray-950) 20%,
-			rgba(255, 255, 255, 0) 100%
-		);
-		background: -moz-linear-gradient(
-			180deg,
-			var(--gray-950) 0%,
-			var(--gray-950) 20%,
-			rgba(255, 255, 255, 0) 100%
-		);
-		background: linear-gradient(
-			180deg,
-			var(--gray-950) 0%,
-			var(--gray-950) 20%,
-			rgba(255, 255, 255, 0) 100%
-		);
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#050505", endColorstr="#FFFFFF00", GradientType=0);
+		color: var(--gray-200);
+		padding: var(--space-md) var(--space-xs);
+		background: transparent;
+	}
+
+	#insights h2, #insights h5 {
+		color: var(--gray-50);
 	}
 	/* Components */
 	.i_top,
 	.i_grid,
 	.i_footer {
-		width: 100%;
 		max-width: var(--max-width-xl);
+		width: 100%;
 	}
 	.i_top,
 	.i_footer {
@@ -126,20 +115,21 @@
 		gap: var(--space-xs);
 		padding-bottom: var(--space-xs);
 		border-bottom: 2px solid hsl(from var(--gray-50) h s l / 0.5);
+		transition: all 0.35s cubic-bezier(0.87, 0, 0.13, 1);
+		will-change: transform;
 	}
 
 	.post:not(.row) {
 		flex-direction: row;
-		height: calc(15svh - var(--space-xs) - 2px);
+		height: calc(15svh - var(--space-xs));
 	}
 
 	.post.row {
 		flex-direction: column;
-		height: calc(30svh - var(--space-xs) - 2px);
+		height: calc(30svh - var(--space-xs));
 	}
 
 	.post_img{
-
 		width: 100%;
 		height: 100%;
 		position: relative;
@@ -161,6 +151,7 @@
 	}
 
 	.post_text {
+		height: 100%;
 		width: 100%;
 		display: flex;
 		flex-direction: column;

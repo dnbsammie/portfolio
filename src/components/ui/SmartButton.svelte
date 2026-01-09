@@ -1,4 +1,5 @@
 <script lang="ts">
+	export let tone: 'light' | 'dark' = 'light';
 	export let label: string | null = null;
 	export let icon: string | null = null;
 	export let ariaLabel: string | null = null;
@@ -6,7 +7,11 @@
 	export let disabled: boolean = false;
 </script>
 
-<button class="icn_btn" {type} {disabled} aria-label={ariaLabel || label || null} on:click>
+<button class="icn_btn"
+		class:dark={tone === 'dark'}
+		class:light={tone === 'light'}
+		{type} {disabled}
+		aria-label={ariaLabel || label || null} on:click>
 	<span class="txt_bx">{label}</span>
 
 	{#if icon}

@@ -47,7 +47,7 @@
 	}
 
 	.toggle_lang.used {
-		color: var(--ember-300);
+		color: var(--accent-500);
 	}
 
 	@media (hover: hover) and (pointer: fine) {

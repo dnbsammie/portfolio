@@ -26,62 +26,30 @@
 </script>
 
 <section class="core" id="core">
-	<div class="container">
-		<aside class="sticky_sidebar">
-			<h6 class="sticky_text">{$t('core.title')}</h6>
-		</aside>
-		<div class="statement">
-			<h2 class="text">{$t('core.statement.1')}</h2>
-			<h2 class="text">{$t('core.statement.2')}</h2>
-			<h2 class="text">{$t('core.statement.3')}</h2>
-			<h2 class="text">{$t('core.statement.4')}</h2>
-		</div>
-	</div>
+	<h2 class="text">{$t('core.statement.1')}</h2>
+	<h2 class="text">{$t('core.statement.2')}</h2>
+	<h2 class="text">{$t('core.statement.3')}</h2>
+	<h2 class="text">{$t('core.statement.4')}</h2>
 </section>
 
 <style>
 	#core {
 		display: flex;
-		flex-direction: row;
-		height: 120svh;
-		padding: var(--space-xxl) var(--space-xs);
-		gap: var(--space-xs);
-		background: var(--gray-950);
-		background: -webkit-linear-gradient(
-			0deg,
-			var(--gray-950) 0%,
-			var(--gray-950) 90%,
-			rgba(255, 255, 255, 0) 100%
-		);
-		background: -moz-linear-gradient(
-			0deg,
-			var(--gray-950) 0%,
-			var(--gray-950) 90%,
-			rgba(255, 255, 255, 0) 100%
-		);
-		background: linear-gradient(
-			0deg,
-			var(--gray-950) 0%,
-			var(--gray-950) 90%,
-			rgba(255, 255, 255, 0) 100%
-		);
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#050505", endColorstr="#FFFFFF00", GradientType=0);
-	}
-
-	.statement{
-		flex: 1;
-		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
+		height: 120svh;
+		padding: var(--space-md) var(--space-xs);
 		gap: var(--space-xs);
-	}
+		background: var(--gray-50);}
 
 	.text {
 		margin: 0;
 		width: 100%;
+		max-width: var(--max-width-xl);
 		line-height: 1.2;
-		color: hsl(from var(--gray-700) h s l / 0.2);
-		background: linear-gradient(to right, var(--gray-100), var(--gray-100)) no-repeat;
+		color: hsl(from var(--gray-800) h s l / 0.2);
+		background: linear-gradient(to right, var(--gray-900), var(--gray-900)) no-repeat;
 		-webkit-background-clip: text;
 		background-clip: text;
 		background-size: 0;

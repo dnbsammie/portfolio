@@ -80,9 +80,12 @@
         "latest": "Latest posts",
         "toggleView": "Toggle view",
         "post": {
-            "01": "hola",
-            "02": "este",
-            "03": "es"
+            "1": "hola",
+            "2": "este",
+            "3": "es",
+            "4": "un",
+            "5": "texto",
+            "6": "prueba"
         },
         "bottom":"Follow Me For More"
     },

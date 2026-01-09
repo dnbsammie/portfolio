@@ -5,16 +5,16 @@
     --font-primary: "Questrial", sans-serif;
     --font-code: "JetBrains Mono", monospace;
     /*  Font Size  */
-    --font-size-h1: clamp(2.250rem, 2.875rem + 1vw, 3.5rem);
-    --font-size-h2: 2.125rem;
-    --font-size-h3: 1.75rem;
-    --font-size-h4: 1.5rem;
-    --font-size-h5: 1.125rem;
-    --font-size-body: 1rem;
-    --font-size-small: 0.625rem;
+    --font-size-h1: clamp(2.25rem, 2.875rem + 1vw, 3.5rem);
+    --font-size-h2: clamp(1.875rem, 2.125rem + 0.5vw, 2.625rem);
+    --font-size-h3: clamp(1.5rem, 1.75rem + 0.4vw, 2.25rem);
+    --font-size-h4: clamp(1.25rem, 1.5rem + 0.35vw, 2rem);
+    --font-size-h5: clamp(1rem, 1.125rem + 0.3vw, 1.5rem);
+    --font-size-body: clamp(0.875rem, 1rem + 0.25vw, 1.25rem);
+    --font-size-small: clamp(0.5rem, 0.625rem + 0.2vw, 0.875rem);
     /* === Colors === */
     /* Gray */
-    --gray-50: hsl(11, 5%, 98%);
+    --gray-50: hsl(11, 5%, 95%);
     --gray-100: hsl(11, 5%, 90%);
     --gray-200: hsl(11, 5%, 80%);
     --gray-300: hsl(11, 5%, 70%);
@@ -24,19 +24,19 @@
     --gray-700: hsl(11, 5%, 30%);
     --gray-800: hsl(11, 5%, 20%);
     --gray-900: hsl(11, 5%, 10%);
-    --gray-950: hsl(11, 5%, 2%);
-    /* Ember */
-    --ember-50: hsl(12, 100%, 95%);
-    --ember-100: hsl(11, 100%, 90%);
-    --ember-200: hsl(11, 100%, 80%);
-    --ember-300: hsl(11, 100%, 70%);
-    --ember-400: hsl(11, 100%, 60%);
-    --ember-500: hsl(11, 100%, 50%);
-    --ember-600: hsl(11, 100%, 40%);
-    --ember-700: hsl(11, 100%, 30%);
-    --ember-800: hsl(11, 100%, 20%);
-    --ember-900: hsl(11, 100%, 10%);
-    --ember-950: hsl(11, 100%, 5%);
+    --gray-950: hsl(11, 5%, 5%);
+    /* Accent */
+    --accent-50: hsl(180, 100%, 95%);
+    --accent-100: hsl(180, 100%, 90%);
+    --accent-200: hsl(180, 100%, 80%);
+    --accent-300: hsl(180, 100%, 70%);
+    --accent-400: hsl(180, 100%, 60%);
+    --accent-500: hsl(180, 100%, 50%);
+    --accent-600: hsl(180, 100%, 40%);
+    --accent-700: hsl(180, 100%, 30%);
+    --accent-800: hsl(180, 100%, 20%);
+    --accent-900: hsl(180, 100%, 10%);
+    --accent-950: hsl(180, 100%, 5%);
     /* === Spacing === */
     --space-xxs: clamp(0.25rem, 0.25rem + 0.2vw, 0.5rem);
     --space-xs: clamp(0.5rem, 0.5rem + 0.5vw, 1rem);
@@ -57,24 +57,27 @@
 
 @media (min-width:960px) {
     :root {
-        --font-size-h1: 8rem;
-        --font-size-h2: 4.5rem;
-        --font-size-h3: 3.5rem;
-        --font-size-h4: 2.25rem;
-        --font-size-h5: 1.375rem;
-        --font-size-body: 1rem;
-        --font-size-small: 0.875rem;
+        --font-size-h1: clamp(4.5rem, 8rem + 1.25vw, 8.75rem);
+        --font-size-h2: clamp(3.25rem, 5.75rem + 1vw, 6.75rem);
+        --font-size-h3: clamp(2.5rem, 4.5rem + 0.85vw, 5.5rem);
+        --font-size-h4: clamp(2rem, 3.25rem + 0.75vw, 4.5rem);
+        --font-size-h5: clamp(1.5rem, 2.25rem + 0.6vw, 3.25rem);
+        --font-size-body: clamp(1rem, 1.25rem + 0.4vw, 1.75rem);
+        --font-size-small: clamp(0.5625rem, 0.75rem + 0.3vw, 1rem);
     }
 }
 
 @media (min-width:1440px) {
     :root {
-        --font-size-h1: clamp(6.75rem, 8.875rem + 1.5vw, 12rem);
-        --font-size-h2: clamp(5rem, 7rem, 9rem);
-        /* --font-size-h3: clamp(5rem, 7rem, 9rem); */
-        /* --font-size-h4: clamp(3rem, 4rem, 9rem); */
-        /* --font-size-h5: clamp(2rem, 3rem, 9rem); */
-        /* --font-size-body: clamp(1rem, 1.5rem, 9rem); */
-        /* --font-size-small: clamp(0.5625rem, 1rem, 9rem); */
+        :root {
+            --font-size-h1: clamp(6.75rem, 8.875rem + 1.5vw, 12rem);
+            --font-size-h2: clamp(4.5rem, 6.75rem + 1.25vw, 9rem);
+            --font-size-h3: clamp(3.25rem, 5rem + 1vw, 6.75rem);
+            --font-size-h4: clamp(2.25rem, 3.75rem + 0.85vw, 5.5rem);
+            --font-size-h5: clamp(1.5rem, 2.75rem + 0.7vw, 4rem);
+            --font-size-body: clamp(1rem, 1.375rem + 0.45vw, 2rem);
+            --font-size-small: clamp(0.75rem, 0.875rem + 0.25vw, 1.25rem);
+        }
+
     }
 }

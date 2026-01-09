@@ -1,13 +1,11 @@
 <script lang="ts">
 	// ─── Lib ───
-	import { favicon } from '$lib';
 	// ── Styles ───
 	import '../styles/animations.css';
 	import '../styles/global.css';
 	import '../styles/mixins.css';
 	import '../styles/variables.css';
 	// ─── Page ───
-
 	let { children } = $props();
 </script>
 
@@ -16,7 +14,7 @@
 	<meta name="description" content="Developer portfolio, projects, blog & experiments." />
 	<meta
 		name="keywords"
-		content="portfolio, vite, svelte, typescript, threejs, three, gsap, animations, github, developer, software"
+		content="portfolio, vite, svelte, html, css, typescript, threejs, three, gsap, animations, github, developer, software"
 	/>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta charset="UTF-8" />
@@ -28,7 +26,7 @@
 	<!-- Title -->
 	<title>S. Rivera | Portfolio</title>
 	<!-- Icons -->
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href="/favicon.svg" />
 	<link
 		rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"

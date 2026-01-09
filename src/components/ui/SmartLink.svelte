@@ -1,4 +1,5 @@
 <script lang="ts">
+	export let tone: 'light' | 'dark' = 'light';
 	export let href: string;
 	export let label: string | null = null;
 	export let icon: string | null = null;
@@ -19,6 +20,8 @@
 
 <a
 	class="icn_btn"
+	class:dark={tone === 'dark'}
+	class:light={tone === 'light'}
 	{href}
 	aria-label={ariaLabel || label || null}
 	target={newTab ? '_blank' : null}

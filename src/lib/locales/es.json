@@ -79,6 +79,14 @@
         "title": "Blog",
         "latest": "Últimas publicaciones",
         "toggleView": "Cambiar vista",
+        "post": {
+            "1": "hola",
+            "2": "este",
+            "3": "es",
+            "4": "un",
+            "5": "texto",
+            "6": "prueba"
+        },
         "bottom":"Sígueme para más"
     },
     "notFound": {

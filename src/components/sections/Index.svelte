@@ -11,7 +11,7 @@
 <section id="index" class="index" aria-labelledby="index-section">
 	<div class="index_top">
 		<div class="index_title">
-			<h6>{$t('home.role')}</h6>
+			<h5>{$t('home.role')}</h5>
 			<h1>Samuel Rivera</h1>
 		</div>
 	</div>
@@ -26,12 +26,14 @@
 					label={$t('nav.emailLabel')}
 					icon="fa-solid fa-chevron-right"
 					ariaLabel="email"
+					tone="light"
 				/>
 				<SmartLink
 					href="#work"
 					label={$t('home.scroll')}
 					icon="fa-solid fa-chevron-right"
 					ariaLabel="scroll-down"
+					tone="light"
 				/>
 			</div>
 		</div>
@@ -60,17 +62,24 @@
 		align-items: center;
 		gap: var(--space-xs);
 		padding: var(--space-sm) 0;
+		background: transparent;
+		color: var(--gray-200);
+	}
+
+	#index h1, #index h5, #index h6 {
+		color: var(--gray-50);
 	}
 
 	.index_container,
 	.index_top {
 		width: 100%;
 		padding: 0 var(--space-sm);
-		max-width: var(--max-width-xxl);
+		max-width: var(--max-width-xl);
 	}
 
 	.index_top {
 		height: fit-content;
+		color: var(--gray-50);
 	}
 
 	.index_container {
@@ -101,7 +110,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: 1fr;
-		grid-column-gap: var(--space-sm);
+		gap: var(--space-sm);
 	}
 
 	.index_skills {
@@ -119,7 +128,7 @@
 		.index_container {
 			grid-template-columns: repeat(4, 1fr);
 			grid-template-rows: 1fr;
-			grid-column-gap: var(--space-md);
+			gap: var(--space-md);
 		}
 
 		.index_info {
@@ -138,49 +147,8 @@
 	@media (min-width: 1080px) {
 		.index_container,
 		.index_top {
-			display: grid;
-			grid-template-columns: repeat(5, 1fr);
-			grid-template-rows: 1fr;
+			margin: 0 auto;
 		}
 
-		.index_title {
-			grid-area: 1 / 2 / 2 / 6;
-		}
-
-		.index_info {
-			grid-area: 1 / 2 / 2 / 4;
-		}
-
-		.index_skills {
-			grid-area: 1 / 4 / 2 / 5;
-		}
-
-		.index_data {
-			grid-area: 1 / 5 / 2 / 6;
-		}
-	}
-
-	@media (min-width: 1440px) {
-		.index_container,
-		.index_top {
-			display: grid;
-			grid-template-columns: repeat(6, 1fr);
-		}
-
-		.index_title {
-			grid-area: 1 / 2 / 2 / 7;
-		}
-
-		.index_info {
-			grid-area: 1 / 2 / 2 / 4;
-		}
-
-		.index_skills {
-			grid-area: 1 / 4 / 2 / 5;
-		}
-
-		.index_data {
-			grid-area: 1 / 5 / 2 / 6;
-		}
 	}
 </style>

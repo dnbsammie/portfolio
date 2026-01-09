@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { scrollIntoView, currentYear, t } from '$lib';
 	import { onMount } from 'svelte';
-	import { base } from '$app/paths';
 	import SmartLink from '../ui/SmartLink.svelte';
 	import LangSwitcher from '../system/LangSwitcher.svelte';
 	import gsap from 'gsap';
@@ -52,7 +51,7 @@
 		<canvas class="f_canvas"></canvas>
 		<div class="f_content">
 			<div class="f_head">
-				<h3>{$t('footer.title')}</h3>
+				<h4>{$t('footer.title')}</h4>
 			</div>
 			<div class="f_info">
 				<div class="f_col" id="paragraph">
@@ -62,6 +61,7 @@
 						label={$t('nav.emailLabel')}
 						icon="fa-solid fa-chevron-right"
 						ariaLabel="email"
+						tone="dark"
 					/>
 				</div>
 				<div class="f_col" id="media">
@@ -100,18 +100,17 @@
 		position: relative;
 		bottom: 0;
 		width: 100%;
-		height: 75svh;
-		background-color: var(--gray-950);
-		color: var(--gray-300);
+		height: 80svh;
+		background-color: var(--gray-50);
 		overflow: hidden;
 	}
 	/* ── Containers ── */
 	.f_container {
 		position: relative;
-		max-width: var(--max-width-xxl);
+		max-width: var(--max-width-xl);
 		width: 100%;
 		height: 100%;
-		padding: var(--space-lg) var(--space-xs) var(--space-xs);
+		padding: var(--space-xs) var(--space-xs) var(--space-xs);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -136,33 +135,29 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-		gap: var(--space-xs);
+		gap: var(--space-md);
 		z-index: 1;
 	}
 
-	.f_content h3,
-	h6 {
-		color: var(--gray-50);
-	}
 	/* ── Inner Div's ── */
 	.f_content > div {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
-		gap: var(--space-xs);
 	}
 	/* ── Top ── */
 	.f_head {
 		flex-direction: column;
 	}
 
-	.f_head h3 {
+	.f_head h4 {
 		text-transform: uppercase;
 		max-width: 25ch;
 	}
 	/* ── Mid ── */
 	.f_info {
 		flex-direction: column;
+		gap: var(--space-md);
 	}
 
 	.f_col,
@@ -172,9 +167,8 @@
 		gap: var(--space-xxs);
 	}
 
-	#paragraph {
+	#paragraph{
 		gap: var(--space-md);
-		margin-bottom: var(--space-md);
 	}
 
 	#paragraph p {
@@ -195,14 +189,14 @@
 	.f_bottom {
 		flex-direction: row;
 		margin-top: auto;
-		border-top: 1px solid var(--gray-50);
+		border-top: 2px solid var(--gray-900);
 		align-items: flex-end;
 		height: 2rem;
 	}
 
 	@media (min-width: 768px) {
 		.f_container {
-			padding: var(--space-lg) var(--space-sm) var(--space-sm);
+			padding: var(--space-xxl) var(--space-sm) var(--space-sm);
 		}
 
 		.f_info {
@@ -210,12 +204,15 @@
 		}
 
 		#paragraph {
-			flex: 2;
-			margin-bottom: none;
+			flex: 3;
 		}
 
 		#paragraph p {
 			width: 75%;
+		}
+
+		#media {
+			flex: 2;
 		}
 	}
 </style>

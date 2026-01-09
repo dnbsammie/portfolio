@@ -77,6 +77,7 @@
 		position: relative;
 		width: 70vw;
 		height: 70vh;
+		color: var(--gray-200);
 		background: hsl(from var(--gray-400) h s l / 0.1);
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
@@ -94,12 +95,14 @@
 		flex-direction: column;
 		justify-content: space-between;
 		padding: var(--space-sm);
+	}
+
+	.pr_title h4{
 		color: var(--gray-50);
 	}
 
 	.pr_title small {
 		font-family: var(--font-code), monospace;
-		color: var(--gray-200);
 	}
 
 	@media (min-width: 768px) {
