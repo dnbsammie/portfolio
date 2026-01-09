@@ -1,5 +1,6 @@
 <script lang="ts">
 	// ─── Lib ───
+	import { favicon } from '$lib';
 	// ── Styles ───
 	import '../styles/animations.css';
 	import '../styles/global.css';
@@ -26,7 +27,7 @@
 	<!-- Title -->
 	<title>S. Rivera | Portfolio</title>
 	<!-- Icons -->
-	<link rel="icon" href="/favicon.svg" />
+	<link rel="icon" href={favicon} />
 	<link
 		rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
