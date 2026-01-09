@@ -61,11 +61,21 @@
 				<div class="menu_others">
 					<div class="menu_col">
 						<h6>{$t('nav.follow')}</h6>
-						<a href="https://codepen.io/dnbsammie" target="_blank">Codepen</a>
-						<a href="https://colorswall.com/users/3710" target="_blank">ColorsWall</a>
-						<a href="https://github.com/dnbsammie" target="_blank">Github</a>
-
-						<a href="https://www.linkedin.com/in/seriveramosq/" target="_blank">LinkedIn </a>
+						<a href="https://codepen.io/dnbsammie" target="_blank" rel="noopener noreferrer"
+							>Codepen</a
+						>
+						<a href="https://colorswall.com/users/3710" target="_blank" rel="noopener noreferrer"
+							>ColorsWall</a
+						>
+						<a href="https://github.com/dnbsammie" target="_blank" rel="noopener noreferrer"
+							>Github</a
+						>
+						<a
+							href="https://www.linkedin.com/in/seriveramosq/"
+							target="_blank"
+							rel="noopener noreferrer"
+							>LinkedIn
+						</a>
 					</div>
 					<div class="menu_col">
 						<h6>{$t('nav.language')}</h6>

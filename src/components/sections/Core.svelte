@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../../styles/variables.css">
 <script lang="ts">
 	import { t } from '$lib';
 	import { onMount } from 'svelte';
@@ -25,6 +24,8 @@
 	});
 </script>
 
+<link rel="stylesheet" href="../../styles/variables.css" />
+
 <section class="core" id="core">
 	<h2 class="text">{$t('core.statement.1')}</h2>
 	<h2 class="text">{$t('core.statement.2')}</h2>
@@ -38,10 +39,11 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 120svh;
+		height: 130svh;
 		padding: var(--space-md) var(--space-xs);
 		gap: var(--space-xs);
-		background: var(--gray-50);}
+		background: var(--gray-50);
+	}
 
 	.text {
 		margin: 0;

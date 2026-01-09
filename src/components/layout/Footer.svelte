@@ -67,10 +67,21 @@
 				<div class="f_col" id="media">
 					<div class="f_sub_col" id="social">
 						<h6>{$t('nav.follow')}</h6>
-						<a href="https://codepen.io/dnbsammie" target="_blank">Codepen</a>
-						<a href="https://colorswall.com/users/3710" target="_blank">ColorsWall</a>
-						<a href="https://github.com/dnbsammie" target="_blank">Github</a>
-						<a href="https://www.linkedin.com/in/seriveramosq/" target="_blank">LinkedIn </a>
+						<a href="https://codepen.io/dnbsammie" target="_blank" rel="noopener noreferrer"
+							>Codepen</a
+						>
+						<a href="https://colorswall.com/users/3710" target="_blank" rel="noopener noreferrer"
+							>ColorsWall</a
+						>
+						<a href="https://github.com/dnbsammie" target="_blank" rel="noopener noreferrer"
+							>Github</a
+						>
+						<a
+							href="https://www.linkedin.com/in/seriveramosq/"
+							target="_blank"
+							rel="noopener noreferrer"
+							>LinkedIn
+						</a>
 					</div>
 					<div class="f_sub_col" id="sitemap">
 						<h6>{$t('nav.sitemap')}</h6>
@@ -100,7 +111,7 @@
 		position: relative;
 		bottom: 0;
 		width: 100%;
-		height: 80svh;
+		height: 75svh;
 		background-color: var(--gray-50);
 		overflow: hidden;
 	}
@@ -110,7 +121,7 @@
 		max-width: var(--max-width-xl);
 		width: 100%;
 		height: 100%;
-		padding: var(--space-xs) var(--space-xs) var(--space-xs);
+		padding: var(--space-xl) var(--space-xs) var(--space-xs);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -167,7 +178,7 @@
 		gap: var(--space-xxs);
 	}
 
-	#paragraph{
+	#paragraph {
 		gap: var(--space-md);
 	}
 
@@ -195,10 +206,6 @@
 	}
 
 	@media (min-width: 768px) {
-		.f_container {
-			padding: var(--space-xxl) var(--space-sm) var(--space-sm);
-		}
-
 		.f_info {
 			flex-direction: row;
 		}

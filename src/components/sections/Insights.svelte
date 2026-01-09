@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { t, img1, img2, img3, img4, img5 } from '$lib';
 	import SmartButton from '../ui/SmartButton.svelte';
-	import gsap from 'gsap';
-	import { CustomEase } from 'gsap/CustomEase';
+	// import gsap from 'gsap';
+	// import { CustomEase } from 'gsap/CustomEase';
 
 	let isTwoColumns = false;
 
@@ -15,31 +15,29 @@
 	<div class="i_top">
 		<h2>{$t('insights.title')}</h2>
 		<SmartButton
-				label={$t('insights.toggleView')}
-				ariaLabel={$t('insights.toggleView')}
-				icon="fa-solid fa-arrows-rotate"
-				on:click={toggleDirection}
-				tone="light"
+			label={$t('insights.toggleView')}
+			ariaLabel={$t('insights.toggleView')}
+			icon="fa-solid fa-arrows-rotate"
+			on:click={toggleDirection}
+			tone="light"
 		/>
 	</div>
-	<div
-			class="i_grid"
-			class:twoCols={isTwoColumns}
-	>
+	<div class="i_grid" class:twoCols={isTwoColumns}>
 		{#each [img1, img2, img3, img4, img5] as img, i}
 			<div class="post" class:row={isTwoColumns}>
 				<div class="post_img" class:row={isTwoColumns}>
-					<img src={img} alt=""/>
+					<img src={img} alt="post img" />
 				</div>
 				<div class="post_text" class:row={isTwoColumns}>
 					<h5>{$t(`insights.post.${i + 1}`)}</h5>
 					<div class="post_row">
 						<small>{$t(`post.date0${i + 1}`)}</small>
 						<a
-								href="https://www.linkedin.com/posts/"
-								class="fa-solid fa-chevron-right"
-								target="_blank"
-								aria-label="post anchor"
+							href="https://www.linkedin.com/posts/"
+							class="fa-solid fa-chevron-right"
+							target="_blank"
+							aria-label="post anchor"
+							rel="noopener noreferrer"
 						></a>
 					</div>
 				</div>
@@ -53,18 +51,19 @@
 
 <style>
 	#insights {
-		height: 128svh;
+		height: 130svh;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
 		gap: var(--space-xs);
 		color: var(--gray-200);
-		padding: var(--space-md) var(--space-xs);
+		padding: var(--space-xl) var(--space-xs) var(--space-md);
 		background: transparent;
 	}
 
-	#insights h2, #insights h5 {
+	#insights h2,
+	#insights h5 {
 		color: var(--gray-50);
 	}
 	/* Components */
@@ -129,7 +128,7 @@
 		height: calc(30svh - var(--space-xs));
 	}
 
-	.post_img{
+	.post_img {
 		width: 100%;
 		height: 100%;
 		position: relative;
