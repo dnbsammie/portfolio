@@ -55,7 +55,7 @@
     --max-width-xxl: 1920px;
 }
 
-@media (min-width:1080px) {
+@media (min-width:960px) {
     :root {
         --font-size-h1: clamp(4.5rem, 8rem + 1.25vw, 8.75rem);
         --font-size-h2: clamp(3.25rem, 5.75rem + 1vw, 6.75rem);

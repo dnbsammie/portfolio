@@ -1,103 +1,111 @@
 <script lang="ts">
-	import { currentYear, isMenuOpen, scrollToSection, t } from '$lib';
-	import { base } from '$app/paths';
-	import SmartLink from '../ui/SmartLink.svelte';
-	import LangSwitcher from '../system/LangSwitcher.svelte';
+	import { currentYear, isMenuOpen, finishMenuAnimation, scrollToSection, t } from '$lib';
+	import LangSwitcher from "../system/LangSwitcher.svelte";
+	import SmartLink from "../ui/SmartLink.svelte";
+
+	let overlay: HTMLElement;
+
+	$: if ($isMenuOpen) {
+		// animations in
+	}
+
+	$: if (!$isMenuOpen) {
+		// animations out
+	}
 </script>
 
-{#if $isMenuOpen}
-	<menu class="menu_overlay">
-		<div class="menu_title">
-			<span id="outline_text">S</span>
-			<span id="outline_text">.</span>
-			<span id="outline_text">R</span>
-			<span id="outline_text">I</span>
-			<span id="outline_text">V</span>
-			<span id="outline_text">E</span>
-			<span id="outline_text">R</span>
-			<span id="outline_text">A</span>
-		</div>
-		<div class="menu_overlay_content">
-			<div class="menu_main">
-				<div class="menu_link_wrapper">
-					<h6>{$t('nav.sitemap')}</h6>
-					<button on:click={() => scrollToSection('index')} class="menu_link">
-						<span>I</span>
-						<span>N</span>
-						<span>D</span>
-						<span>E</span>
-						<span>X</span>
-					</button>
-					<button on:click={() => scrollToSection('work')} class="menu_link">
-						<span>W</span>
-						<span>O</span>
-						<span>R</span>
-						<span>K</span>
-					</button>
-					<button on:click={() => scrollToSection('core')} class="menu_link">
-						<span>C</span>
-						<span>O</span>
-						<span>R</span>
-						<span>E</span>
-					</button>
-					<button on:click={() => scrollToSection('stack')} class="menu_link">
-						<span>S</span>
-						<span>T</span>
-						<span>A</span>
-						<span>C</span>
-						<span>K</span>
-					</button>
-					<button on:click={() => scrollToSection('insights')} class="menu_link">
-						<span>I</span>
-						<span>N</span>
-						<span>S</span>
-						<span>I</span>
-						<span>G</span>
-						<span>H</span>
-						<span>T</span>
-						<span>S</span>
-					</button>
+<div bind:this={overlay} 	class="menu_overlay"
+	 class:open={$isMenuOpen}
+	 aria-hidden={!$isMenuOpen}>
+	<div class="menu_title">
+		<span id="outline_text">S</span>
+		<span id="outline_text">.</span>
+		<span id="outline_text">R</span>
+		<span id="outline_text">I</span>
+		<span id="outline_text">V</span>
+		<span id="outline_text">E</span>
+		<span id="outline_text">R</span>
+		<span id="outline_text">A</span>
+	</div>
+	<div class="menu_overlay_content">
+		<div class="menu_main">
+			<div class="menu_link_wrapper">
+				<h6>{$t('nav.sitemap')}</h6>
+				<button on:click={() => scrollToSection('index')} class="menu_link">
+					<span>I</span>
+					<span>N</span>
+					<span>D</span>
+					<span>E</span>
+					<span>X</span>
+				</button>
+				<button on:click={() => scrollToSection('work')} class="menu_link">
+					<span>W</span>
+					<span>O</span>
+					<span>R</span>
+					<span>K</span>
+				</button>
+				<button on:click={() => scrollToSection('core')} class="menu_link">
+					<span>C</span>
+					<span>O</span>
+					<span>R</span>
+					<span>E</span>
+				</button>
+				<button on:click={() => scrollToSection('stack')} class="menu_link">
+					<span>S</span>
+					<span>T</span>
+					<span>A</span>
+					<span>C</span>
+					<span>K</span>
+				</button>
+				<button on:click={() => scrollToSection('insights')} class="menu_link">
+					<span>I</span>
+					<span>N</span>
+					<span>S</span>
+					<span>I</span>
+					<span>G</span>
+					<span>H</span>
+					<span>T</span>
+					<span>S</span>
+				</button>
+			</div>
+			<div class="menu_others">
+				<div class="menu_col">
+					<h6>{$t('nav.follow')}</h6>
+					<a href="https://codepen.io/dnbsammie" target="_blank" rel="noopener noreferrer"
+						>Codepen</a
+					>
+					<a href="https://colorswall.com/users/3710" target="_blank" rel="noopener noreferrer"
+						>ColorsWall</a
+					>
+					<a href="https://github.com/dnbsammie" target="_blank" rel="noopener noreferrer">Github</a
+					>
+					<a
+						href="https://www.linkedin.com/in/seriveramosq/"
+						target="_blank"
+						rel="noopener noreferrer"
+						>LinkedIn
+					</a>
 				</div>
-				<div class="menu_others">
-					<div class="menu_col">
-						<h6>{$t('nav.follow')}</h6>
-						<a href="https://codepen.io/dnbsammie" target="_blank" rel="noopener noreferrer"
-							>Codepen</a
-						>
-						<a href="https://colorswall.com/users/3710" target="_blank" rel="noopener noreferrer"
-							>ColorsWall</a
-						>
-						<a href="https://github.com/dnbsammie" target="_blank" rel="noopener noreferrer"
-							>Github</a
-						>
-						<a
-							href="https://www.linkedin.com/in/seriveramosq/"
-							target="_blank"
-							rel="noopener noreferrer"
-							>LinkedIn
-						</a>
-					</div>
-					<div class="menu_col">
-						<h6>{$t('nav.language')}</h6>
-						<LangSwitcher />
-						<SmartLink
-							href="mailto:seriveramosq@gmail.com"
-							label={$t('nav.emailLabel')}
-							icon="fa-solid fa-chevron-right"
-							ariaLabel="email"
-						/>
-					</div>
+				<div class="menu_col">
+					<h6>{$t('nav.language')}</h6>
+					<LangSwitcher />
+					<SmartLink
+						href="mailto:seriveramosq@gmail.com"
+						label={$t('nav.emailLabel')}
+						icon="fa-solid fa-chevron-right"
+						ariaLabel="email"
+					/>
 				</div>
 			</div>
 		</div>
-		<hr />
-		<div class="menu_footer">
-			<small class="copyright" aria-label="copyright"
-				>&copy; {currentYear} Samuel Rivera. {$t('footer.copyright')}</small
-			>
-		</div>
-	</menu>
-{/if}
+	</div>
+	<hr />
+	<div class="menu_footer">
+		<small class="copyright" aria-label="copyright"
+			>&copy; {currentYear} Samuel Rivera. {$t('footer.copyright')}</small
+		>
+	</div>
+</div>
 
 <style>
 	.menu_overlay {
@@ -115,6 +123,18 @@
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
 		z-index: 4999;
+		opacity: 0;
+		pointer-events: none;
+		transform: translateY(-100%);
+		transition:
+				opacity 0.4s ease,
+				transform 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+	}
+
+	.menu_overlay.open {
+		opacity: 1;
+		pointer-events: auto;
+		transform: translateY(0);
 	}
 	/* Main Containers */
 	.menu_overlay_content,

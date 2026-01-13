@@ -27,7 +27,6 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
-		background: transparent;
 		align-items: center;
 		gap: var(--space-xs);
 	}
@@ -38,21 +37,21 @@
 		border: none;
 		background: none;
 		font-size: var(--font-size-small);
-		color: hsl(from var(--gray-500) h s l / 0.8);
+		color: hsl(from var(--gray-600) h s l / 0.8);
 		transition: all 0.2s ease-in-out;
 	}
 
 	.toggle_lang:active {
-		color: var(--gray-50);
+		color: var(--accent-500);
 	}
 
 	.toggle_lang.used {
-		color: var(--accent-500);
+		color: var(--accent-700);
 	}
 
 	@media (hover: hover) and (pointer: fine) {
 		.toggle_lang:hover {
-			color: var(--gray-50);
+			color: var(--accent-500);
 		}
 	}
 </style>

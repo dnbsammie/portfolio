@@ -2,12 +2,11 @@
 	import { isMenuOpen, toggleMenu } from '$lib/stores/menu';
 </script>
 
-<button
-	class="burger"
-	class:active={$isMenuOpen}
-	aria-label="menu hamburger icon"
-	aria-pressed={$isMenuOpen}
-	on:click={toggleMenu}
+<button class="burger"
+		class:active={$isMenuOpen}
+		aria-label="menu"
+		aria-pressed={$isMenuOpen}
+		on:click={toggleMenu}
 >
 	<span></span>
 	<span></span>

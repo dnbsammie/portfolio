@@ -5,8 +5,9 @@ export * from './stores/i18n';
 export * from './stores/menu';
 export * from './stores/scroll'
 export * from './stores/time';
-export * from './utils/i18n-helpers';
 export * from './three/background';
+export * from './utils/i18n-helpers';
+export * from './utils/lenis-wrapper';
 
 // ──── Icons ────
 import favicon from './assets/icon/favicon.svg'

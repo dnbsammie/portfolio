@@ -1,12 +1,24 @@
 <script lang="ts">
 	// ─── Lib ───
-	import { favicon } from '$lib';
+	import { favicon, initLenis } from '$lib';
 	// ── Styles ───
 	import '../styles/animations.css';
 	import '../styles/global.css';
 	import '../styles/mixins.css';
 	import '../styles/variables.css';
 	// ─── Page ───
+	import { onMount } from 'svelte';
+
+	onMount(()=>{
+		const lenis =initLenis();
+
+		function raf(time:number){
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
+		requestAnimationFrame(raf);
+	});
+
 	let { children } = $props();
 </script>
 

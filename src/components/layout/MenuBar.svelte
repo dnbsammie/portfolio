@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { favicon } from '$lib';
-	import { base } from '$app/paths';
 	import AudioPlayer from '../system/AudioPlayer.svelte';
 	import MenuToggle from '../ui/MenuToggle.svelte';
 </script>
 
 <div class="menu-bar">
 	<div class="logo">
-		<a href="{base}/">
+		<a href="/" rel="external">
 			<img src={favicon} alt="logo" />
 		</a>
 	</div>
