@@ -1,15 +1,13 @@
 <script lang="ts">
 	import { favicon } from '$lib';
 	import { base } from '$app/paths';
-	import { page } from '$app/stores';
 	import AudioPlayer from '../system/AudioPlayer.svelte';
 	import MenuToggle from '../ui/MenuToggle.svelte';
-	$: current = $page.url.pathname;
 </script>
 
 <div class="menu-bar">
 	<div class="logo">
-		<a href={`${base}${current}`} rel="external">
+		<a href={base} rel="external">
 			<img src={favicon} alt="logo" />
 		</a>
 	</div>
