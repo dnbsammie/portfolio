@@ -61,7 +61,7 @@
 						label={$t('nav.emailLabel')}
 						icon="fa-solid fa-chevron-right"
 						ariaLabel="email"
-						tone="dark"
+						tone="light"
 					/>
 				</div>
 				<div class="f_col" id="media">
@@ -112,9 +112,14 @@
 		bottom: 0;
 		width: 100%;
 		height: 75svh;
-		background-color: var(--gray-50);
+		background-color: var(--gray-950);
+		color: var(--gray-200);
 		overflow: hidden;
 	}
+
+	footer h4, h6{
+	color: var(--gray-50);
+}
 	/* ── Containers ── */
 	.f_container {
 		position: relative;
@@ -200,7 +205,7 @@
 	.f_bottom {
 		flex-direction: row;
 		margin-top: auto;
-		border-top: 2px solid var(--gray-900);
+		border-top: 2px solid var(--gray-100);
 		align-items: flex-end;
 		height: 2rem;
 	}
